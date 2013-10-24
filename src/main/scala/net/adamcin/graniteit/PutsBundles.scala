@@ -51,15 +51,6 @@ trait PutsBundles extends HttpParameters with BundlePathParameters {
   var skipMkdirs = false
 
   /**
-   * Puts the specified file to the configured bundle install location
-   * @param file file to put
-   * @return either log messages or a throwable
-   */
-  def putBundle(file: File): Either[Throwable, List[String]] = {
-    putBundleToPath(file, getBundleRepoPath(file.getName))
-  }
-
-  /**
    * Puts the specified file to the configured test bundle install location
    * @param file file to put
    * @return either log messages or a throwable

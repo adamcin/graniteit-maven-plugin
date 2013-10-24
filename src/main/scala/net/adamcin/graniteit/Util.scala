@@ -48,7 +48,7 @@ object Util {
     }
   }
 
-  lazy final val GROUP_ID = pluginProperties.getProperty("groupID")
+  lazy final val GROUP_ID = pluginProperties.getProperty("groupId")
   lazy final val ARTIFACT_ID = pluginProperties.getProperty("artifactId")
   lazy final val VERSION = pluginProperties.getProperty("version")
   lazy final val NAME = pluginProperties.getProperty("name")
