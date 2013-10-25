@@ -45,64 +45,23 @@ trait OutputParameters extends RequiresProject {
   lazy val outputDirectory = getExistingDir(new File(project.getBuild.getDirectory))
 
   /**
-   * target vltpack file
+   * target content-package file
    */
   lazy val targetFile: File = new File(outputDirectory, project.getBuild.getFinalName + ".zip")
 
   /**
-   * directory containing vltpack-generated files
+   * directory containing graniteit-generated files
    */
-  lazy val vltpackDirectory = getExistingDir(new File(outputDirectory, "vltpack"))
+  lazy val graniteitDirectory = getExistingDir(new File(outputDirectory, "graniteit"))
 
-  /**
-   * directory containing resolved bundles
-   */
-  lazy val embedBundlesDirectory = getExistingDir(new File(vltpackDirectory, "embed-bundles"))
+  lazy val uploadDirectory = getExistingDir(new File(graniteitDirectory, "upload-content-package"))
+  lazy val uploadSha = new File(uploadDirectory, "checksum.sha1")
 
+  lazy val uploadSlingJunitDirectory = getExistingDir(new File(graniteitDirectory, "upload-sling-junit"))
+  lazy val uploadSlingJunitSha = new File(uploadSlingJunitDirectory, "checksum.sha1")
 
-  def relativeToBundleInstallPath(bundle: File): String = {
-    Util.toRelative(embedBundlesDirectory, bundle.getPath)
-  }
-
-  /**
-   * directory containing resolved packages
-   */
-  lazy val embedPackagesDirectory = getExistingDir(new File(vltpackDirectory, "embed-packages"))
-  lazy val packageDirectory = getExistingDir(new File(vltpackDirectory, "package"))
-  lazy val packageSha = new File(packageDirectory, "package.sha1")
-
-  lazy val uploadDirectory = getExistingDir(new File(vltpackDirectory, "IT-upload"))
-  lazy val uploadSha = new File(uploadDirectory, "IT-upload.sha1")
-
-  lazy val uploadTestsDirectory = getExistingDir(new File(vltpackDirectory, "IT-upload-tests"))
-  lazy val uploadTestsSha = new File(uploadTestsDirectory, "IT-upload-tests.sha1")
-
-  lazy val vaultInfDirectory = getExistingDir(new File(vltpackDirectory, "vault-inf"))
-  lazy val transientRepoDirectory = getExistingDir(new File(vaultInfDirectory, "definitionRepo"))
-
-  /**
-   * vault-inf-generated META-INF/vault/... resources
-   */
-  lazy val vaultInfMetaInfDirectory = getExistingDir(new File(vaultInfDirectory, "META-INF"))
-  lazy val configSha = new File(vaultInfDirectory, "config.sha1")
-  lazy val filterSha = new File(vaultInfDirectory, "filter.sha1")
-  lazy val propertiesSha = new File(vaultInfDirectory, "properties.sha1")
-  lazy val definitionSha = new File(vaultInfDirectory, "definition.sha1")
-
-  lazy val vaultDirectory = getExistingDir(new File(vaultInfMetaInfDirectory, "vault"))
-  lazy val configXml = new File(vaultDirectory, "config.xml")
-  lazy val settingsXml = new File(vaultDirectory, "settings.xml")
-  lazy val filterXml = new File(vaultDirectory, "filter.xml")
-  lazy val propertiesXml = new File(vaultDirectory, "properties.xml")
-
-  lazy val definitionDirectory = getExistingDir(new File(vaultDirectory, "definition"))
-  lazy val definitionXml = new File(definitionDirectory, ".content.xml")
-
-  lazy val thumbnailDirectory = getExistingDir(new File(definitionDirectory, "thumbnail"))
-  lazy val thumbnailFileDirectory = getExistingDir(new File(thumbnailDirectory, "file"))
-  lazy val thumbnailFileXml = getExistingDir(new File(thumbnailFileDirectory, ".content.xml"))
-
-  lazy val hooksDirectory = getExistingDir(new File(vaultDirectory, "hooks"))
+  lazy val uploadTestsDirectory = getExistingDir(new File(graniteitDirectory, "upload-tests"))
+  lazy val uploadTestsSha = new File(uploadTestsDirectory, "checksum.sha1")
 
   def getExistingDir(file: File): File = {
     if (!file.exists() && !file.mkdir()) {

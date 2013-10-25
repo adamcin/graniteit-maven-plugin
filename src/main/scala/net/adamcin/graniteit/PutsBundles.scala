@@ -98,7 +98,7 @@ trait PutsBundles extends HttpParameters with BundlePathParameters {
 
     val dirs = segments.foldLeft(List.empty[String]) {
       (dirs: List[String], segment: String) => dirs match {
-        case Nil => List(segment)
+        case Nil => List("/" + segment)
         case head :: tail => (head + "/" + segment) :: dirs
       }
     }.reverse

@@ -28,12 +28,12 @@
 
 <document>
     <properties>
-        <title>vltpack-maven-plugin</title>
+        <title>graniteit-maven-plugin</title>
     </properties>
     <body>
-        <section name="vltpack-maven-plugin">
+        <section name="graniteit-maven-plugin">
             <p>
-                The vltpack-maven-plugin is a tool for developers of Adobe CQ/CRX/Granite-based applications to
+                The graniteit-maven-plugin is a tool for developers of Adobe CQ/CRX/Granite-based applications to
                 create content package artifacts from vlt working copies.
             </p>
             <subsection name="CRX Content Package Creation">
@@ -45,12 +45,11 @@
                     production CRX servers.
                 </p>
                 <p>
-                    The vltpack-maven-plugin defines a "vltpack" packaging type to represent CRX content packages. It
-                    provides a set of maven goals mapped to the default lifecycle (<tt>compile</tt>, <tt>test</tt>,
-                    <tt>package</tt>, <tt>install</tt>, <tt>deploy</tt>)
-                    that are designed to assemble the package pieces from a VLT working copy, overlay project properties,
-                    and embed any referenced maven dependencies, and then deploy that assembled package to a central maven
-                    artifact repository like Nexus or Artifactory.
+                    The graniteit-maven-plugin defines a "content-package-it" packaging type which is an enhanced version
+                    of the content-package lifecycle. It provides a set of maven goals mapped to the pre-integration-test
+                    and post-integration-test phases of the default lifecycle (<tt>compile</tt>, <tt>test</tt>,
+                    <tt>package</tt>, <tt>install</tt>, <tt>deploy</tt>), and maps the integration-test and verify goals
+                    of the maven-failsafe-plugin to their appropriate phases as well.
                 </p>
             </subsection>
             <subsection name="Integration Test Support">
@@ -63,25 +62,20 @@
                     use a profile to set the <tt>supportITs</tt> user property to enable the following goals:
                 </p>
                 <dl>
-                    <dt><a href="IT-upload-mojo.html">IT-upload</a></dt>
-                    <dd>Uploads the vltpack project artifact to the configured CRX server</dd>
-                    <dt><a href="IT-upload-tests-mojo.html">IT-upload-tests</a></dt>
+                    <dt><a href="upload-content-package-mojo.html">upload-content-package</a></dt>
+                    <dd>Uploads the content-package-it project artifact to the configured CRX server</dd>
+                    <dt><a href="upload-tests-mojo.html">upload-tests</a></dt>
                     <dd>Uploads packages and bundles to prepare the CRX server for execution of integration tests</dd>
-                    <dt><a href="IT-server-ready-mojo.html">IT-server-ready</a></dt>
+                    <dt><a href="wait-for-server-mojo.html">wait-for-server</a></dt>
                     <dd>Causes the build to wait for server readiness by repeatedly pinging it at the configured path and
                         checking the response for a specific substring</dd>
-                    <dt><a href="IT-http-properties-mojo.html">IT-http-properties</a></dt>
+                    <dt><a href="set-http-properties-mojo.html">set-http-properties</a></dt>
                     <dd>Exports the configured HTTP connection parameters as System properties for classes executed by the
                         maven-failsafe-plugin during the <tt>integration-test</tt> phase.</dd>
                 </dl>
             </subsection>
             <subsection name="Design Priorities">
                 <ul>
-                    <li>
-                        Enable consistent and reliable assembly of vault packages, and avoid interfering with the
-                        development process that produces the contents of those packages, with specific consideration
-                        given to Adobe's own instructions for development using the vlt tool.
-                    </li>
                     <li>
                         Support a test-driven maven lifecycle using the
                         <a href="Sling JUnit Framework">Sling JUnit integration test framework</a>.
@@ -101,11 +95,12 @@
             </subsection>
             <subsection name="Requirements">
                 <ul>
-                    <li>Maven 3.0</li>
-                    <li>JDK 1.6</li>
+                    <li>Maven 3.0+</li>
+                    <li>JDK 1.6+</li>
                     <li>
                         <strong>
-                            vltpack-maven-plugin depends on proprietary Adobe libraries which are available in the
+                            graniteit-maven-plugin will only work when used in conjunction with the proprietary
+                            content-package-maven-plugin, which is available in the
                             public <a href="http://repo.adobe.com/">Adobe Nexus repository</a>
                         </strong>
                     </li>

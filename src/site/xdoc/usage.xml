@@ -28,15 +28,15 @@
 
 <document>
     <properties>
-        <title>VLT Pack Maven Plugin Usage</title>
+        <title>Granite IT Maven Plugin Usage</title>
     </properties>
     <body>
-        <title>Using the VLT Pack Maven Plugin</title>
+        <title>Using the Granite IT Maven Plugin</title>
 
-        <section name="Basic vltpack POM">
+        <section name="Basic POM">
             <p>
-                The following example represents the minimum necessary configuration to create a
-                vltpack artifact.
+                The following example represents the minimum necessary configuration to add integration test
+                functionality to your content-package artifact.
             </p>
             <source>
 <![CDATA[<project>
@@ -46,30 +46,28 @@
     <artifactId>example-ui</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- be sure to specify the packaging type as 'vltpack' -->
-    <packaging>vltpack</packaging>
+    <!-- be sure to specify the packaging type as 'content-package-it' -->
+    <packaging>content-package-it</packaging>
 
     <build>
 
-        <!-- specify resources that will be copied to the
-        target directory for inclusion in the package -->
-        <resources>
-            <resource>
-                <directory>src/main/content</directory>
-            </resource>
-        </resources>
-
         <plugins>
+            <!-- enable extensions on both the content-package-maven-plugin and the graniteit-maven-plugin
+                to activate the content-package-it enhanced packaging lifecycle -->
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <version>0.0.20</version>
+                <extensions>true</extensions>
+            </plugin>
+
             <plugin>
                 <groupId>net.adamcin</groupId>
-                <artifactId>vltpack-maven-plugin</artifactId>
-                <version>1.0.0</version>
-
-                <!-- also be sure to enable extensions
-                to activate the vltpack lifecycle -->
+                <artifactId>graniteit-maven-plugin</artifactId>
+                <version>0.8.0</version>
                 <extensions>true</extensions>
-
             </plugin>
+
         </plugins>
     </build>
 </project>]]>

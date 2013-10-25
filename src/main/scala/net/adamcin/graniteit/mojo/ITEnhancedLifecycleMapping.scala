@@ -10,11 +10,18 @@ object ITEnhancedLifecycleMapping {
   def idForGoal(goal: String) = List(Util.GROUP_ID, Util.ARTIFACT_ID, goal).mkString(":")
   final val preITPhase = List(
     idForGoal("upload-content-package"),
+    idForGoal("upload-sling-junit"),
     idForGoal("upload-tests"),
-    idForGoal("wait-for-server"),
-    idForGoal("set-http-properties")
+    idForGoal("wait-for-server")
   ).mkString(",")
-  final val itPhase = "org.apache.maven.plugins:maven-failsafe-plugin"
+  final val itPhase = List(
+    idForGoal("set-http-properties"),
+    idForGoal("init-sling-junit"),
+    idForGoal("reset-sling-jacoco"),
+    "org.apache.maven.plugins:maven-failsafe-plugin:integration-test"
+  ).mkString(",")
+  final val postITPhase = idForGoal("jacoco-exec")
+  final val verifyPhase = "org.apache.maven.plugins:maven-failsafe-plugin:verify"
   final val ROLE = classOf[LifecycleMapping]
   final val ROLE_HINT = Util.PACKAGING
 }
@@ -37,6 +44,8 @@ class ITEnhancedLifecycleMapping extends LifecycleMapping {
       val transMap = (Map.empty[String, String] ++ value.getPhases.asScala)
         .updated("pre-integration-test", ITEnhancedLifecycleMapping.preITPhase)
         .updated("integration-test", ITEnhancedLifecycleMapping.itPhase)
+        .updated("post-integration-test", ITEnhancedLifecycleMapping.postITPhase)
+        .updated("verify", ITEnhancedLifecycleMapping.verifyPhase)
       transformed.setPhases(transMap.asJava)
       (name, transformed)
     } else {

@@ -37,12 +37,6 @@
         <fluidoSkin>
             <facebookLike />
             <googlePlusOne />
-            <!--
-            <gitHub>
-                <projectId>adamcin/scalamojo-maven-plugin</projectId>
-                <ribbonColor>black</ribbonColor>
-            </gitHub>
-            -->
         </fluidoSkin>
     </custom>
 
@@ -59,8 +53,8 @@
 
     <body>
         <links>
-            <item name="Wiki" href="http://wiki.github.com/adamcin/vltpack-maven-plugin/"/>
-            <item name="FAQ" href="http://wiki.github.com/adamcin/vltpack-maven-plugin/frequently-asked-questions"/>
+            <item name="Wiki" href="http://wiki.github.com/adamcin/graniteit-maven-plugin/"/>
+            <item name="FAQ" href="http://wiki.github.com/adamcin/graniteit-maven-plugin/frequently-asked-questions"/>
         </links>
         <menu name="Overview">
             <item name="Introduction" href="index.html" />
@@ -69,11 +63,7 @@
             <item name="ScalaDocs" href="scaladocs/index.html" />
         </menu>
         <menu name="How To">
-            <item name="VLT Pack and VLT" href="vltpack-and-vlt.html" />
-            <item name="Upload Packages to CQ" href="uploading-and-installing-packages.html" />
-            <item name="Embed Dependencies" href="embedding-dependencies.html" />
             <item name="Setup Integration Tests" href="integration-testing.html" />
-            <!--<item name="Upload OSGi Bundles to CQ" href="uploading-bundles-to-cq.html" />-->
         </menu>
         <menu ref="reports" />
         <menu ref="modules" />
