@@ -11,8 +11,16 @@ import org.apache.maven.plugins.annotations.Parameter
  */
 trait SlingJacocoParameters {
 
+  /**
+   * Set to override the Sling Jacoco Servlet path
+   */
   @Parameter(defaultValue = "/system/sling/jacoco")
   val jacocoServletPath: String = null
 
-
+  /**
+   * Set to cause the build to fail if the jacoco servlet request
+   * fails for any reason
+   */
+  @Parameter
+  val failOnJacocoError = false
 }

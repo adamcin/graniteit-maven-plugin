@@ -45,12 +45,6 @@ trait PutsBundles extends HttpParameters with BundlePathParameters {
   private val log = LoggerFactory.getLogger(getClass)
 
   /**
-   * Set to true to skip the use of the MKCOL WebDAV method for the creation ancestor JCR paths
-   */
-  @Parameter(property = "graniteit.skip.mkdirs")
-  var skipMkdirs = false
-
-  /**
    * Puts the specified file to the configured test bundle install location
    * @param file file to put
    * @return either log messages or a throwable
@@ -93,29 +87,4 @@ trait PutsBundles extends HttpParameters with BundlePathParameters {
     }
   }
 
-  def mkdirs(absPath: String): (RequestBuilder, Response) = {
-    val segments = absPath.split('/').filter(!_.isEmpty)
-
-    val dirs = segments.foldLeft(List.empty[String]) {
-      (dirs: List[String], segment: String) => dirs match {
-        case Nil => List("/" + segment)
-        case head :: tail => (head + "/" + segment) :: dirs
-      }
-    }.reverse
-
-    dirs.foldLeft (null: (RequestBuilder, Response)) {
-      (p: (RequestBuilder, Response), path: String) => {
-        val doMkdir = Option(p) match {
-          case Some((req, resp)) => isSuccess(req, resp)
-          case None => true
-        }
-        if (doMkdir) { mkdir(path) } else { p }
-      }
-    }
-  }
-
-  def mkdir(absPath: String): (RequestBuilder, Response) = {
-    val req = urlForPath(absPath).MKCOL
-    (req, Http(req)())
-  }
 }

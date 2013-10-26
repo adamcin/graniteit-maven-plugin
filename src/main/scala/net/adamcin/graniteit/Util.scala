@@ -54,6 +54,8 @@ object Util {
   lazy final val NAME = pluginProperties.getProperty("name")
   final val PACKAGING = "content-package-it"
 
+  final val PROP_DISABLE_LIFECYLCES = "graniteit.lifecycles.disabled"
+
   val inputCloser: CloseAction[InputStream] = new CloseAction[InputStream] {
     protected def closeImpl(resource: InputStream) = {
       try {

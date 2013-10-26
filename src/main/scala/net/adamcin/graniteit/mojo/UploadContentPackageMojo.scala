@@ -38,7 +38,7 @@ import scala.collection.JavaConverters._
  * @author Mark Adamcin
  */
 @Mojo(name = "upload-content-package",
-  defaultPhase = LifecyclePhase.INTEGRATION_TEST,
+  defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
   threadSafe = true)
 class UploadContentPackageMojo
   extends BaseITMojo
@@ -66,7 +66,7 @@ class UploadContentPackageMojo
   override def execute() {
     super.execute()
 
-    skipOrExecute(skip) {
+    skipWithTestsOrExecute(skip) {
       if (!packageDependencies.isEmpty) {
         getLog.info("uploading package dependencies...")
         packageDependencyArtifacts.foreach { uploadPackageArtifact }

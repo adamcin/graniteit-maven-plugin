@@ -38,7 +38,7 @@ import scala.collection.JavaConverters._
  * @author Mark Adamcin
  */
 @Mojo(name = "set-http-properties",
-  defaultPhase = LifecyclePhase.INTEGRATION_TEST,
+  defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
   requiresProject = false,
   threadSafe = true)
 class SetHttpPropertiesMojo

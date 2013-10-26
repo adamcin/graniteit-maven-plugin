@@ -136,10 +136,16 @@ trait HttpParameters extends BaseMojo {
   val proxyPass: String = null
 
   /**
-   *
+   * Server ID for credentials defined in maven settings
    */
   @Parameter(property = "graniteit.proxy.serverId")
   val proxyServerId: String = null
+
+  /**
+   * Set to true to skip the use of the MKCOL WebDAV method for the creation ancestor JCR paths
+   */
+  @Parameter(property = "graniteit.skip.mkdirs")
+  var skipMkdirs = false
 
   lazy val credentials: (String, String) = {
     val exCreds = (user, optDecrypt(pass))
@@ -231,6 +237,15 @@ trait HttpParameters extends BaseMojo {
     }
   }
 
+  def isSlingPostSuccess(req: RequestBuilder, resp: Response): Boolean = {
+    (req.build().getMethod, Option(resp)) match {
+      case ("POST", Some(response)) => {
+        Set(200, 201) contains response.getStatusCode
+      }
+      case _ => false
+    }
+  }
+
   def getReqRespLogMessage(req: RequestBuilder, resp: Response): String = {
     (Option(req), Option(resp)) match {
       case (Some(request), Some(response)) =>
@@ -263,5 +278,31 @@ trait HttpParameters extends BaseMojo {
         waitForResponse(nTrys + 1)
       }
     }
+  }
+
+  def mkdirs(absPath: String): (RequestBuilder, Response) = {
+    val segments = absPath.split('/').filter(!_.isEmpty)
+
+    val dirs = segments.foldLeft(List.empty[String]) {
+      (dirs: List[String], segment: String) => dirs match {
+        case Nil => List("/" + segment)
+        case head :: tail => (head + "/" + segment) :: dirs
+      }
+    }.reverse
+
+    dirs.foldLeft (null: (RequestBuilder, Response)) {
+      (p: (RequestBuilder, Response), path: String) => {
+        val doMkdir = Option(p) match {
+          case Some((req, resp)) => isSuccess(req, resp)
+          case None => true
+        }
+        if (doMkdir) { mkdir(path) } else { p }
+      }
+    }
+  }
+
+  def mkdir(absPath: String): (RequestBuilder, Response) = {
+    val req = urlForPath(absPath).MKCOL
+    (req, Http(req)())
   }
 }
