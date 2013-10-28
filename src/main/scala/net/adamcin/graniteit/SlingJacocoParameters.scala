@@ -1,15 +1,10 @@
 package net.adamcin.graniteit
 
 import org.apache.maven.plugins.annotations.Parameter
+import dispatch._, Defaults._
+import org.apache.maven.plugin.MojoFailureException
 
-/**
- * Created with IntelliJ IDEA.
- * User: madamcin
- * Date: 10/25/13
- * Time: 4:12 PM
- * To change this template use File | Settings | File Templates.
- */
-trait SlingJacocoParameters {
+trait SlingJacocoParameters extends HttpParameters {
 
   /**
    * Set to override the Sling Jacoco Servlet path
@@ -23,4 +18,19 @@ trait SlingJacocoParameters {
    */
   @Parameter
   val failOnJacocoError = false
+
+  def jacocoExecPath = jacocoServletPath + "/exec"
+
+  def ifJacocoAvailable(body: => Unit): Unit = {
+    val req = urlForPath(jacocoServletPath)
+    if (isSuccess(req, expedite(req, Http(req))._2)) {
+      body
+    } else {
+      if (failOnJacocoError) {
+        throw new MojoFailureException("Jacoco servlet was not available. Failing build.")
+      } else {
+        getLog.warn("Jacoco servlet was not available. Skipping Jacoco functionality.")
+      }
+    }
+  }
 }

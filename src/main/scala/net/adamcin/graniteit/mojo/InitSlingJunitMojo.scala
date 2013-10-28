@@ -2,7 +2,7 @@ package net.adamcin.graniteit.mojo
 
 import net.adamcin.graniteit.HttpParameters
 import org.apache.maven.plugins.annotations.{LifecyclePhase, Mojo, Parameter}
-import dispatch._
+import dispatch._, Defaults._
 import org.apache.maven.plugin.{MojoExecutionException, MojoFailureException}
 
 @Mojo(name = "init-sling-junit",
@@ -95,7 +95,7 @@ class InitSlingJunitMojo
       "./artifactId" -> project.getArtifactId,
       "./version" -> project.getVersion
     )
-    val resp = Http(req)()
+    val resp = expedite(req, Http(req))._2
 
     if (isSlingPostSuccess(req, resp)) {
       Right(resp.getHeader("location"))
@@ -104,7 +104,7 @@ class InitSlingJunitMojo
     }
   }
 
-  def checkContent(response: Promise[String]): Promise[Boolean] = {
+  def checkContent(response: Future[String]): Future[Boolean] = {
     response.fold(
       (ex) => {
         getLog.info("server ready check exception: " + ex.getMessage)

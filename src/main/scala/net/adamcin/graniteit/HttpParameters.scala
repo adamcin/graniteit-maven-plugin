@@ -27,13 +27,14 @@
 
 package net.adamcin.graniteit
 
-import dispatch._
+import dispatch._, dispatch.Defaults._
 import com.ning.http.client._
 import org.apache.maven.plugins.annotations.{Component, Parameter}
 import scala.Some
 import annotation.tailrec
 import org.sonatype.plexus.components.sec.dispatcher.SecDispatcher
 import net.adamcin.graniteit.mojo.BaseMojo
+import scala.concurrent.Future
 
 /**
  * Adds fluid support for the MKCOL method
@@ -48,7 +49,7 @@ trait DavVerbs extends MethodVerbs {
  * Wraps an implicitly created DefaultRequestVerbs object with the DavVerbs trait
  * @param wrapped the requestbuilder wrapper to unwrap
  */
-class DavRequestVerbs(wrapped: DefaultRequestVerbs) extends DefaultRequestVerbs(wrapped.subject) with DavVerbs
+class DavReq(wrapped: Req) extends Req(wrapped.run) with DavVerbs
 
 /**
  * Trait defining common mojo parameters and methods for establishing HTTP connections to a Granite server.
@@ -171,11 +172,11 @@ trait HttpParameters extends BaseMojo {
     }
   }
 
-  implicit def implyDavRequestVerbs(wrapped: DefaultRequestVerbs) = new DavRequestVerbs(wrapped)
+  implicit def implyDavVerbs(req: Req) = new DavReq(req)
 
-  def urlForPath(absPath: String): DefaultRequestVerbs = {
+  def urlForPath(absPath: String): Req = {
     val (u, p) = credentials
-    List(dispatch.url(baseUrl + absPath) as_!(u, p)).map {
+    List(url(baseUrl + absPath) as_!(u, p)).map {
       (req) => activeProxy match {
         case None => req
         case Some(proxy) => req.setProxyServer(proxy)
@@ -222,8 +223,8 @@ trait HttpParameters extends BaseMojo {
     }
   }
 
-  def isSuccess(req: RequestBuilder, resp: Response): Boolean = {
-    (req.build().getMethod, Option(resp)) match {
+  def isSuccess(req: Req, resp: Response): Boolean = {
+    (req.toRequest.getMethod, Option(resp)) match {
       case ("MKCOL", Some(response)) => {
         Set(201, 405) contains response.getStatusCode
       }
@@ -237,8 +238,8 @@ trait HttpParameters extends BaseMojo {
     }
   }
 
-  def isSlingPostSuccess(req: RequestBuilder, resp: Response): Boolean = {
-    (req.build().getMethod, Option(resp)) match {
+  def isSlingPostSuccess(req: Req, resp: Response): Boolean = {
+    (req.toRequest.getMethod, Option(resp)) match {
       case ("POST", Some(response)) => {
         Set(200, 201) contains response.getStatusCode
       }
@@ -246,12 +247,12 @@ trait HttpParameters extends BaseMojo {
     }
   }
 
-  def getReqRespLogMessage(req: RequestBuilder, resp: Response): String = {
+  def getReqRespLogMessage(req: Req, resp: Response): String = {
     (Option(req), Option(resp)) match {
       case (Some(request), Some(response)) =>
-        request.build().getMethod + " " + request.url + " => " + resp.getStatusCode + " " + resp.getStatusText
+        request.toRequest.getMethod + " " + request.url + " => " + resp.getStatusCode + " " + resp.getStatusText
       case (Some(request), None) =>
-        request.build().getMethod + " " + request.url + " => null"
+        request.toRequest.getMethod + " " + request.url + " => null"
       case (None, Some(response)) =>
         "null => " + resp.getStatusCode + " " + resp.getStatusText
       case _ => "null => null"
@@ -262,7 +263,7 @@ trait HttpParameters extends BaseMojo {
   final def waitForResponse[T](nTrys: Int)
                               (implicit until: Long,
                                requestFunction: () => (Request, AsyncHandler[T]),
-                               contentChecker: (Promise[T]) => Promise[Boolean]): Boolean = {
+                               contentChecker: (Future[T]) => Future[Boolean]): Boolean = {
     if (nTrys > 0) {
       val sleepTime = nTrys * 1000L
       getLog.info("sleeping " + nTrys + " seconds")
@@ -280,7 +281,7 @@ trait HttpParameters extends BaseMojo {
     }
   }
 
-  def mkdirs(absPath: String): (RequestBuilder, Response) = {
+  def mkdirs(absPath: String): (Req, Response) = {
     val segments = absPath.split('/').filter(!_.isEmpty)
 
     val dirs = segments.foldLeft(List.empty[String]) {
@@ -290,8 +291,8 @@ trait HttpParameters extends BaseMojo {
       }
     }.reverse
 
-    dirs.foldLeft (null: (RequestBuilder, Response)) {
-      (p: (RequestBuilder, Response), path: String) => {
+    dirs.foldLeft (null: (Req, Response)) {
+      (p: (Req, Response), path: String) => {
         val doMkdir = Option(p) match {
           case Some((req, resp)) => isSuccess(req, resp)
           case None => true
@@ -301,8 +302,12 @@ trait HttpParameters extends BaseMojo {
     }
   }
 
-  def mkdir(absPath: String): (RequestBuilder, Response) = {
-    val req = urlForPath(absPath).MKCOL
-    (req, Http(req)())
+  def mkdir(absPath: String): (Req, Response) = {
+    val req: Req = urlForPath(absPath).MKCOL
+    expedite(req, Http(req))
+  }
+
+  def expedite[T](req: Req, resp: Future[T]): (Req, T) = {
+    (req, resp())
   }
 }

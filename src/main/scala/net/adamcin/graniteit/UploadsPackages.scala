@@ -29,7 +29,7 @@ package net.adamcin.graniteit
 
 import java.io.File
 import org.apache.maven.plugin.{MojoFailureException, MojoExecutionException}
-import dispatch._
+import dispatch._, Defaults._
 import org.slf4j.LoggerFactory
 import util.parsing.json.JSON
 import com.ning.http.multipart.FilePart
@@ -94,7 +94,7 @@ trait UploadsPackages extends HttpParameters with IdentifiesPackages {
         }
       }
 
-    def checkContent(response: Promise[String]): Promise[Boolean] = {
+    def checkContent(response: Future[String]): Future[Boolean] = {
       response.fold((ex) => { getLog.info("check service exception: " + ex.getMessage); false },
         (content) => true)
     }
@@ -115,7 +115,7 @@ trait UploadsPackages extends HttpParameters with IdentifiesPackages {
             "force" -> force.toString
           )
           req.addBodyPart(new FilePart("package", id.getDownloadName, file))
-          val resp = Http(req)()
+          val resp = expedite(req, Http(req))._2
 
           if (isSuccess(req, resp)) {
             parseServiceResponse(resp.getResponseBody)
@@ -138,7 +138,7 @@ trait UploadsPackages extends HttpParameters with IdentifiesPackages {
             "recursive" -> recursive.toString,
             "autosave" -> (autosave max 1024).toString
           )
-          val resp = Http(req)()
+          val resp = expedite(req, Http(req))._2
 
           if (isSuccess(req, resp)) {
             parseServiceResponse(resp.getResponseBody)
@@ -157,7 +157,7 @@ trait UploadsPackages extends HttpParameters with IdentifiesPackages {
         case Some(id) => {
           val pkgPath = id.getInstallationPath + ".zip"
           val req = urlForPath(servicePath + pkgPath) << Map("cmd" -> "contents")
-          val resp = Http(req)()
+          val resp = expedite(req, Http(req))._2
 
           if (isSuccess(req, resp)) {
             parseServiceResponse(resp.getResponseBody)

@@ -54,7 +54,21 @@ object Util {
   lazy final val NAME = pluginProperties.getProperty("name")
   final val PACKAGING = "content-package-it"
 
-  final val PROP_DISABLE_LIFECYLCES = "graniteit.lifecycles.disabled"
+  final val PROP_DISABLE_LIFECYLCES = "graniteit.lifecycle.disabled"
+
+  /**
+   * convenience method to build the signature for a goal defined by this plugin
+   * @param goal the goal name
+   * @return
+   */
+  def graniteitGoal(goal: String) = List(Util.GROUP_ID, Util.ARTIFACT_ID, goal).mkString(":")
+
+  /**
+   * convenience method to build the signature for a goal defined by the maven-failsafe-plugin
+   * @param goal the goal name
+   * @return
+   */
+  def failsafeGoal(goal: String) = List("org.apache.maven.plugins", "maven-failsafe-plugin", goal).mkString(":")
 
   val inputCloser: CloseAction[InputStream] = new CloseAction[InputStream] {
     protected def closeImpl(resource: InputStream) = {

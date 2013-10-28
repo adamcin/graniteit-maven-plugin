@@ -27,12 +27,10 @@
 
 package net.adamcin.graniteit
 
-import com.ning.http.client.{RequestBuilder, Response}
-import dispatch._
+import dispatch._, Defaults._
 import java.io.File
 import org.apache.maven.plugin.MojoExecutionException
 import org.slf4j.LoggerFactory
-import org.apache.maven.plugins.annotations.Parameter
 import org.apache.jackrabbit.vault.util.Text
 
 /**
@@ -56,7 +54,7 @@ trait PutsBundles extends HttpParameters with BundlePathParameters {
   def putBundleToPath(file: File, path: String): Either[Throwable, List[String]] = {
     lazy val (putReq, putResp) = {
       val req = urlForPath(path) <<< file
-      (req, Http(req)())
+      expedite(req, Http(req))
     }
 
     val fromMkdirs: Either[Throwable, List[String]] = if (!skipMkdirs) {
