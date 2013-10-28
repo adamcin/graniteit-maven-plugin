@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>mojo - Granite IT Maven Plugin 0.5.0-SNAPSHOT API - net.adamcin.graniteit.mojo</title>
+          <meta name="description" content="mojo - Granite IT Maven Plugin 0.5.0 - SNAPSHOT API - net.adamcin.graniteit.mojo" />
+          <meta name="keywords" content="mojo Granite IT Maven Plugin 0.5.0 SNAPSHOT API net.adamcin.graniteit.mojo" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.adamcin.graniteit.mojo.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.adamcin">adamcin</a>.<a href="../package.html" class="extype" name="net.adamcin.graniteit">graniteit</a></p>
+        <h1>mojo</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mojo</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.adamcin.graniteit.mojo.BaseITMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BaseITMojoextendsBaseMojowithRequiresProject"></a>
+      <a id="BaseITMojo:BaseITMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BaseITMojo.html"><span class="name">BaseITMojo</span></a><span class="result"> extends <a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> with <a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base project IT mojo defining common mojo parameters and methods for enabling/disabling traffic to the configured
+integration test server for goals bound to the integration test phase of the default content-package-with-IT lifecycle</p>
+    </li><li name="net.adamcin.graniteit.mojo.BaseMojo" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BaseMojoextendsAbstractMojo"></a>
+      <a id="BaseMojo:BaseMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BaseMojo.html"><span class="name">BaseMojo</span></a><span class="result"> extends <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base mojo class</p>
+    </li><li name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BaseSlingJunitMojoextendsBaseITMojowithDetectsSlingJunitDependency"></a>
+      <a id="BaseSlingJunitMojo:BaseSlingJunitMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BaseSlingJunitMojo.html"><span class="name">BaseSlingJunitMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../DetectsSlingJunitDependency.html" class="extype" name="net.adamcin.graniteit.DetectsSlingJunitDependency">DetectsSlingJunitDependency</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="net.adamcin.graniteit.mojo.ContentPackageITArtifactHandler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ContentPackageITArtifactHandlerextendsArtifactHandler"></a>
+      <a id="ContentPackageITArtifactHandler:ContentPackageITArtifactHandler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ContentPackageITArtifactHandler.html"><span class="name">ContentPackageITArtifactHandler</span></a><span class="result"> extends <span class="extype" name="org.apache.maven.artifact.handler.ArtifactHandler">ArtifactHandler</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Component</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="net.adamcin.graniteit.mojo.ContentPackageITLifecycleMapping" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ContentPackageITLifecycleMappingextendsLifecycleMapping"></a>
+      <a id="ContentPackageITLifecycleMapping:ContentPackageITLifecycleMapping"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ContentPackageITLifecycleMapping.html"><span class="name">ContentPackageITLifecycleMapping</span></a><span class="result"> extends <span class="extype" name="org.apache.maven.lifecycle.mapping.LifecycleMapping">LifecycleMapping</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Component</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="net.adamcin.graniteit.mojo.HelpMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HelpMojoextendsAbstractMojo"></a>
+      <a id="HelpMojo:HelpMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HelpMojo.html"><span class="name">HelpMojo</span></a><span class="result"> extends <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="net.adamcin.graniteit.mojo.InitSlingJunitMojo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InitSlingJunitMojoextendsBaseSlingJunitMojowithHttpParameters"></a>
+      <a id="InitSlingJunitMojo:InitSlingJunitMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="InitSlingJunitMojo.html"><span class="name">InitSlingJunitMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Mojo</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="net.adamcin.graniteit.mojo.JacocoExecMojo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="JacocoExecMojoextendsBaseSlingJunitMojowithHttpParameterswithSlingJacocoParameters"></a>
+      <a id="JacocoExecMojo:JacocoExecMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="JacocoExecMojo.html"><span class="name">JacocoExecMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="../SlingJacocoParameters.html" class="extype" name="net.adamcin.graniteit.SlingJacocoParameters">SlingJacocoParameters</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Mojo</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="net.adamcin.graniteit.mojo.ResetJacocoMojo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ResetJacocoMojoextendsBaseSlingJunitMojowithHttpParameterswithSlingJacocoParameters"></a>
+      <a id="ResetJacocoMojo:ResetJacocoMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ResetJacocoMojo.html"><span class="name">ResetJacocoMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="../SlingJacocoParameters.html" class="extype" name="net.adamcin.graniteit.SlingJacocoParameters">SlingJacocoParameters</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Mojo</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="net.adamcin.graniteit.mojo.SetHttpPropertiesMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SetHttpPropertiesMojoextendsBaseITMojowithHttpParameters"></a>
+      <a id="SetHttpPropertiesMojo:SetHttpPropertiesMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SetHttpPropertiesMojo.html"><span class="name">SetHttpPropertiesMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Exports HTTP properties defined in <code> HttpParameters</code> and the active Maven Proxy configuration for integration
+tests to use via <code> java.lang.System#getProperties</code>.</p>
+    </li><li name="net.adamcin.graniteit.mojo.UploadContentPackageMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UploadContentPackageMojoextendsBaseITMojowithOutputParameterswithUploadsPackageswithPackageDependencies"></a>
+      <a id="UploadContentPackageMojo:UploadContentPackageMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UploadContentPackageMojo.html"><span class="name">UploadContentPackageMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a> with <a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Uploads the project vault package and its dependencies to the configured IT server</p>
+    </li><li name="net.adamcin.graniteit.mojo.UploadSlingJunitMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UploadSlingJunitMojoextendsBaseSlingJunitMojowithOutputParameterswithPutsBundles"></a>
+      <a id="UploadSlingJunitMojo:UploadSlingJunitMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UploadSlingJunitMojo.html"><span class="name">UploadSlingJunitMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../PutsBundles.html" class="extype" name="net.adamcin.graniteit.PutsBundles">PutsBundles</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Upload the sling junit framework bundles, including:
+org.</p>
+    </li><li name="net.adamcin.graniteit.mojo.UploadTestsMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UploadTestsMojoextendsBaseITMojowithRequiresProjectwithPackageDependencieswithResolvesArtifactswithOutputParameterswithUploadsPackageswithPutsBundles"></a>
+      <a id="UploadTestsMojo:UploadTestsMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UploadTestsMojo.html"><span class="name">UploadTestsMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a> with <a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a> with <a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a> with <a href="../PutsBundles.html" class="extype" name="net.adamcin.graniteit.PutsBundles">PutsBundles</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Upload integration test dependencies, including vault packages and OSGi bundles, to the configured integration test
+server</p>
+    </li><li name="net.adamcin.graniteit.mojo.WaitForServerMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WaitForServerMojoextendsBaseITMojowithHttpParameters"></a>
+      <a id="WaitForServerMojo:WaitForServerMojo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="WaitForServerMojo.html"><span class="name">WaitForServerMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Waits for server readiness before continuing on to integration-test phase.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.adamcin.graniteit.mojo.ContentPackageITLifecycleMapping" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContentPackageITLifecycleMapping"></a>
+      <a id="ContentPackageITLifecycleMapping:ContentPackageITLifecycleMapping"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ContentPackageITLifecycleMapping$.html"><span class="name">ContentPackageITLifecycleMapping</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt"></p>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
