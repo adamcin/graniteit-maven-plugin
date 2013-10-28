@@ -17,8 +17,11 @@ class JacocoExecMojo
   @Parameter(property = "graniteit.skip.jacoco-exec")
   val skip = false
 
-  @Parameter(defaultValue = "${project.outputDirectory}/jacoco.exec")
+  @Parameter(defaultValue = "${project.build.directory}/jacoco.exec")
   var jacocoExecFile: File = null
+
+  @Parameter(defaultValue = "jacoco-data")
+  val jacocoExecClassifier: String = null
 
   override def execute(): Unit = {
     skipWithTestsOrExecute(skip) {
@@ -30,8 +33,20 @@ class JacocoExecMojo
 
         val req = urlForPath(jacocoExecPath)
         expedite(req, Http(req > as.File(jacocoExecFile)).either)._2 match {
-          case Right(resp) => getLog.info("Jacoco Runtime Data successfully retrieved.")
+          case Right(resp) => {
+            val jacocoExecArtifact = repositorySystem.createArtifactWithClassifier(
+              project.getGroupId,
+              project.getArtifactId,
+              project.getVersion,
+              "exec",
+              jacocoExecClassifier
+            )
+            jacocoExecArtifact.setFile(jacocoExecFile)
+            project.addAttachedArtifact(jacocoExecArtifact)
+            getLog.info("Jacoco Runtime Data successfully retrieved.")
+          }
           case Left(ex: Throwable) => {
+            jacocoExecFile.delete()
             if (failOnJacocoError) {
               throw new MojoFailureException("Failed to retrieve Jacoco runtime data. " + ex.getMessage)
             } else {

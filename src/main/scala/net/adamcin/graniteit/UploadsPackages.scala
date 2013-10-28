@@ -114,10 +114,10 @@ trait UploadsPackages extends HttpParameters with IdentifiesPackages {
             "cmd" -> "upload",
             "force" -> force.toString
           )
-          req.addBodyPart(new FilePart("package", id.getDownloadName, file))
-          val resp = expedite(req, Http(req))._2
+          val reqWPkg = req.addBodyPart(new FilePart("package", id.getDownloadName, file))
+          val resp = expedite(reqWPkg, Http(reqWPkg))._2
 
-          if (isSuccess(req, resp)) {
+          if (isSuccess(reqWPkg, resp)) {
             parseServiceResponse(resp.getResponseBody)
           } else {
             Left(new MojoExecutionException("Failed to upload file: " + file))
