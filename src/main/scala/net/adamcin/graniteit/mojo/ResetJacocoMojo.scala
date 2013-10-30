@@ -5,6 +5,13 @@ import net.adamcin.graniteit.{SlingJacocoParameters, HttpParameters}
 import dispatch._, Defaults._
 import org.apache.maven.plugin.MojoFailureException
 
+/**
+ * Resets the remote jacoco data prior to execution of the integration-test phase.
+ * Because the Jacoco runtime is singular for the instance, be careful to avoid
+ * running multiple content-package-it builds against the same server at the same
+ * time, as that might result in corrupt code coverage results.
+ * @since 0.8.0
+ */
 @Mojo(name = "reset-jacoco",
   defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
   threadSafe = true)

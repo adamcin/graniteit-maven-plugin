@@ -34,7 +34,6 @@ import scalax.io.Resource
 /**
  * Trait defining common output path variables
  * @since 0.6.0
- * @author Mark Adamcin
  */
 trait OutputParameters extends RequiresProject {
   private val log = LoggerFactory.getLogger(getClass)

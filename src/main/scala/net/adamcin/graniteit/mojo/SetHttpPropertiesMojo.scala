@@ -34,8 +34,7 @@ import scala.collection.JavaConverters._
 /**
  * Exports HTTP properties defined in {@link HttpParameters} and the active Maven Proxy configuration for integration
  * tests to use via {@link java.lang.System#getProperties}.
- * @since 1.0.0
- * @author Mark Adamcin
+ * @since 0.6.0
  */
 @Mojo(name = "set-http-properties",
   defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
@@ -46,7 +45,7 @@ class SetHttpPropertiesMojo
   with HttpParameters {
 
   /**
-   * Maps the effective HTTP protocol (http/https) to the specified system property
+   * Set to true to specifically disable this goal
    */
   @Parameter(property = "graniteit.skip.set-http-properties")
   val skip = false

@@ -7,12 +7,10 @@ import scalax.io.Resource
 import org.apache.maven.artifact.Artifact
 
 /**
- * Upload the sling junit framework bundles, including:
- * org.apache.sling.junit.core
- * org.apache.sling.junit.remote
- * org.apache.sling.junit.scriptable
+ * Upload the sling junit framework bundles necessary for SlingRemoteTest execution,
+ * including: org.apache.sling.junit.core, org.apache.sling.junit.remote,
+ * and org.apache.sling.junit.scriptable
  * @since 0.6.0
- * @author Mark Adamcin
  */
 @Mojo(name = "upload-sling-junit",
   defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
@@ -21,7 +19,7 @@ import org.apache.maven.artifact.Artifact
 class UploadSlingJunitMojo
   extends BaseSlingJunitMojo
   with OutputParameters
-  with PutsBundles {
+  with UploadsBundles {
 
   /**
    * Set to true to skip execution of this mojo
@@ -50,16 +48,15 @@ class UploadSlingJunitMojo
         (artifact) => Option(artifact.getFile) match {
           case None => throw new MojoExecutionException("failed to resolve artifact: " + artifact.getId)
           case Some(bundle) => {
-
             if (shouldForceUploadBundles ||
-              inputFileModified(uploadSlingJunitSha, List(bundle)))
-
-              putTestBundle(bundle) match {
+              inputFileModified(uploadSlingJunitSha, List(bundle))) {
+              uploadTestBundle(bundle) match {
                 case Left(ex) => throw ex
                 case Right(messages) => messages.foreach {
                   getLog.info(_)
                 }
               }
+            }
           }
         }
       }

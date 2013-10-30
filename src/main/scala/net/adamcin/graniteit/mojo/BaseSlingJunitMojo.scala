@@ -2,6 +2,10 @@ package net.adamcin.graniteit.mojo
 
 import net.adamcin.graniteit.DetectsSlingJunitDependency
 
+/**
+ * Base Sling Junit Mojo class
+ * @since 0.6.0
+ */
 class BaseSlingJunitMojo
   extends BaseITMojo
   with DetectsSlingJunitDependency {

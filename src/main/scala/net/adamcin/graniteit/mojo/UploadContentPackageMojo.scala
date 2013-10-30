@@ -28,14 +28,13 @@
 package net.adamcin.graniteit.mojo
 
 import org.apache.maven.plugins.annotations.{Parameter, Mojo, LifecyclePhase}
-import net.adamcin.graniteit.{ChecksumCalculator, UploadsPackages, PackageDependencies, OutputParameters}
+import net.adamcin.graniteit.{ChecksumCalculator, UploadsPackages, OutputParameters}
 import scala.collection.JavaConverters._
 
 
 /**
- * Uploads the project vault package and its dependencies to the configured IT server
- * @since 1.0.0
- * @author Mark Adamcin
+ * Uploads the project content-package artifact to the configured IT server
+ * @since 0.6.0
  */
 @Mojo(name = "upload-content-package",
   defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
@@ -43,18 +42,17 @@ import scala.collection.JavaConverters._
 class UploadContentPackageMojo
   extends BaseITMojo
   with OutputParameters
-  with UploadsPackages
-  with PackageDependencies {
+  with UploadsPackages {
 
   /**
-   * Set to true to skip mojo execution
+   * Set to true to specifically disable this goal
    */
   @Parameter(property = "graniteit.skip.upload-content-package")
   var skip = false
 
   lazy val uploadChecksum = {
     val calc = new ChecksumCalculator
-    packageDependencies.asScala.foreach { calc.add }
+    calc.add(targetFile)
     calc.calculate()
   }
 
@@ -67,10 +65,6 @@ class UploadContentPackageMojo
     super.execute()
 
     skipWithTestsOrExecute(skip) {
-      if (!packageDependencies.isEmpty) {
-        getLog.info("uploading package dependencies...")
-        packageDependencyArtifacts.foreach { uploadPackageArtifact }
-      }
 
       getLog.info("uploading main package...")
       uploadPackageArtifact(project.getArtifact)(shouldForceUpload)

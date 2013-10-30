@@ -8,7 +8,7 @@ import net.adamcin.graniteit.Util
 import org.codehaus.plexus.logging.Logger
 
 /**
- *
+ * Constants for the {@link ContentPackageITLifecycleMapping} component
  */
 object ContentPackageITLifecycleMapping {
 
@@ -44,7 +44,7 @@ object ContentPackageITLifecycleMapping {
   final val itPhase = Util.failsafeGoal("integration-test")
 
   // download the jacoco.exec file and attach it as an artifact
-  final val postITPhase = Util.graniteitGoal("jacoco-exec")
+  final val postITPhase = Util.graniteitGoal("jacoco-data")
 
   // execute the maven-failsafe-plugin verify goal
   final val verifyPhase = Util.failsafeGoal("verify")
@@ -53,6 +53,10 @@ object ContentPackageITLifecycleMapping {
   final val ROLE_HINT = Util.PACKAGING
 }
 
+/**
+ * "content-package-it" {@link LifecycleMapping} implementation designed to merge explicit integration-test phase mappings
+ * with whatever the "content-package" {@link LifecycleMapping} component defines
+ */
 @Component(role = ContentPackageITLifecycleMapping.ROLE, hint = ContentPackageITLifecycleMapping.ROLE_HINT)
 class ContentPackageITLifecycleMapping extends LifecycleMapping {
 
@@ -93,6 +97,10 @@ class ContentPackageITLifecycleMapping extends LifecycleMapping {
   def getPhases(p1: String): java.util.Map[String, String] = cplm.getPhases(p1)
 }
 
+/**
+ * "content-package-it" {@link ArtifactHandler} that simply wraps the component defined by the
+ * content-package-maven-plugin
+ */
 @Component(role = classOf[ArtifactHandler], hint = ContentPackageITLifecycleMapping.ROLE_HINT)
 class ContentPackageITArtifactHandler extends ArtifactHandler {
 

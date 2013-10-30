@@ -35,9 +35,9 @@ import java.util.Properties
 /**
  * Utility methods used by the plugin
  * @since 0.6.0
- * @author Mark Adamcin
  */
 object Util {
+
   lazy val pluginProperties = {
     Resource.fromURL(getClass.getResource("plugin.properties")).inputStream.acquireAndGet {
       (f) => {
@@ -52,6 +52,7 @@ object Util {
   lazy final val ARTIFACT_ID = pluginProperties.getProperty("artifactId")
   lazy final val VERSION = pluginProperties.getProperty("version")
   lazy final val NAME = pluginProperties.getProperty("name")
+
   final val PACKAGING = "content-package-it"
 
   final val PROP_DISABLE_LIFECYLCES = "graniteit.lifecycle.disabled"

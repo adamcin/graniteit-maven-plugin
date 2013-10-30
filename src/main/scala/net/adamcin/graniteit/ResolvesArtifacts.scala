@@ -48,7 +48,6 @@ import util.matching.Regex
  * Trait defining common mojo parameters and methods useful for arbitrarily resolving artifacts from
  * local and remote repositories
  * @since 0.6.0
- * @author Mark Adamcin
  */
 trait ResolvesArtifacts extends BaseMojo {
   private val log = LoggerFactory.getLogger(getClass)
@@ -71,7 +70,6 @@ trait ResolvesArtifacts extends BaseMojo {
   /**
    * Specify the local repository path for resolved artifacts
    * Refer to maven-install-plugin:install-file
-   * @since 1.0.4
    */
   @Parameter(property = "graniteit.localRepositoryPath")
   val localRepositoryPath: File = null

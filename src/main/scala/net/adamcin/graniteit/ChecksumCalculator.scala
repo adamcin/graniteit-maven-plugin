@@ -4,6 +4,10 @@ import java.io.File
 import java.security.MessageDigest
 import scalax.io.Resource
 
+/**
+ * Mutable class used to calculate checksums. This is used to establish
+ * whether input data for a given goal has changed between maven executions.
+ */
 class ChecksumCalculator {
   final val md = MessageDigest.getInstance("SHA-1")
   final val nullBytes = "null".getBytes("UTF-8")

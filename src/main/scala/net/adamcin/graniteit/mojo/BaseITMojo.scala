@@ -33,8 +33,7 @@ import net.adamcin.graniteit.RequiresProject
 /**
  * Base project IT mojo defining common mojo parameters and methods for enabling/disabling traffic to the configured
  * integration test server for goals bound to the integration test phase of the default content-package-with-IT lifecycle
- * @since 1.0.0
- * @author Mark Adamcin
+ * @since 0.6.0
  */
 class BaseITMojo
   extends BaseMojo

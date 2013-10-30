@@ -4,6 +4,11 @@ import org.apache.maven.plugins.annotations.Parameter
 import dispatch._, Defaults._
 import org.apache.maven.plugin.MojoFailureException
 
+/**
+ * Trait defining common parameters and methods supporting Sling-based Jacoco
+ * functionality and reporting
+ * @since 0.8.0
+ */
 trait SlingJacocoParameters extends HttpParameters {
 
   /**

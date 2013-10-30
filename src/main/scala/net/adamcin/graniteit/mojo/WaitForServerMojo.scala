@@ -8,20 +8,18 @@ import net.adamcin.graniteit.HttpParameters
 /**
  * Waits for server readiness before continuing on to integration-test phase. Fails the build if
  * the configured timeout is exceeded.
- * @author Mark Adamcin
- * @since 1.0.0
+ * @since 0.6.0
  */
 @Mojo(
   name = "wait-for-server",
   defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
-  threadSafe = true
-)
+  threadSafe = true)
 class WaitForServerMojo
   extends BaseITMojo
   with HttpParameters {
 
   /**
-   * Set to true to skip this goal
+   * Set to true to specifically disable this goal
    */
   @Parameter(property = "graniteit.skip.wait-for-server")
   val skip = false

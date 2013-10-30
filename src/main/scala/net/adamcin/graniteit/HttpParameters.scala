@@ -38,8 +38,7 @@ import scala.concurrent.Future
 
 /**
  * Adds fluid support for the MKCOL method
- * @since 0.6.0
- * @author Mark Adamcin
+ * @since 0.8.0
  */
 trait DavVerbs extends MethodVerbs {
   def MKCOL = subject.setMethod("MKCOL")
@@ -47,15 +46,13 @@ trait DavVerbs extends MethodVerbs {
 
 /**
  * Wraps an implicitly created DefaultRequestVerbs object with the DavVerbs trait
- * @param wrapped the requestbuilder wrapper to unwrap
+ * @param wrapped the Req to wrap
  */
 class DavReq(wrapped: Req) extends Req(wrapped.run) with DavVerbs
 
 /**
  * Trait defining common mojo parameters and methods for establishing HTTP connections to a Granite server.
- * Reuses the vltpack.user parameter defined in the UsernameAware trait as part of the connection credentials
- * @since 0.6.0
- * @author Mark Adamcin
+ * @since 0.8.0
  */
 trait HttpParameters extends BaseMojo {
 
@@ -81,7 +78,7 @@ trait HttpParameters extends BaseMojo {
   val pass = DEFAULT_PASS
 
   /**
-   *
+   * Id of server defined in the maven settings to use for credentials
    */
   @Parameter(property = "graniteit.serverId")
   val serverId: String = null
@@ -137,7 +134,7 @@ trait HttpParameters extends BaseMojo {
   val proxyPass: String = null
 
   /**
-   * Server ID for credentials defined in maven settings
+   * Server ID for proxy credentials defined in maven settings
    */
   @Parameter(property = "graniteit.proxy.serverId")
   val proxyServerId: String = null
@@ -307,7 +304,5 @@ trait HttpParameters extends BaseMojo {
     expedite(req, Http(req))
   }
 
-  def expedite[T](req: Req, resp: Future[T]): (Req, T) = {
-    (req, resp())
-  }
+  def expedite[T](req: Req, resp: Future[T]): (Req, T) = (req, resp())
 }

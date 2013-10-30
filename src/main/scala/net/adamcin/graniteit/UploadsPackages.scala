@@ -42,7 +42,6 @@ import org.apache.maven.artifact.Artifact
  * Trait defining common mojo parameters and methods useful for uploading and installing vault packages on
  * CQ servers
  * @since 0.6.0
- * @author Mark Adamcin
  */
 trait UploadsPackages extends HttpParameters with IdentifiesPackages {
   private val log = LoggerFactory.getLogger(getClass)

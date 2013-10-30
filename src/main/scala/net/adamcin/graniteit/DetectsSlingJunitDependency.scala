@@ -6,6 +6,11 @@ import org.apache.maven.artifact.Artifact
 import scala.collection.JavaConverters._
 import org.apache.maven.artifact.versioning.ArtifactVersion
 
+/**
+ * Defines common parameters and methods for supporting Sling Junit Framework
+ * functionality
+ * @since 0.6.0
+ */
 trait DetectsSlingJunitDependency
   extends ResolvesArtifacts {
 
@@ -16,6 +21,10 @@ trait DetectsSlingJunitDependency
 
   final val slingJunitArtifactIds = Set(artifactIdCore, artifactIdRemote, artifactIdScriptable)
 
+  /**
+   * Specify to override the resolved version of Sling Junit Framework dependencies. Leave blank
+   * to detect the version from project-defined sling junit dependencies
+   */
   @Parameter(property = "sling.junit.version")
   val slingJunitVersion: String = null
 

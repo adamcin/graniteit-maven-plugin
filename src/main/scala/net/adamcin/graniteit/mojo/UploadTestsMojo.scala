@@ -38,10 +38,9 @@ import net.adamcin.graniteit._
 import scala.Some
 
 /**
- * Upload integration test dependencies, including vault packages and OSGi bundles, to the configured integration test
- * server
- * @since 1.0.0
- * @author Mark Adamcin
+ * Upload integration test dependencies, including content-packages and OSGi bundles,
+ * to the configured integration test server.
+ * @since 0.6.0
  */
 @Mojo(name = "upload-tests",
   defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
@@ -50,11 +49,10 @@ import scala.Some
 class UploadTestsMojo
   extends BaseITMojo
   with RequiresProject
-  with PackageDependencies
   with ResolvesArtifacts
   with OutputParameters
   with UploadsPackages
-  with PutsBundles {
+  with UploadsBundles {
 
   /**
    * Set to true to skip execution of this mojo
@@ -111,8 +109,8 @@ class UploadTestsMojo
             case None => throw new MojoExecutionException("failed to resolve artifact: " + artifact.getId)
             case Some(bundle) => {
               if (shouldForceUploadBundles || inputFileModified(uploadTestsSha, List(bundle))) {
-                putTestBundle(bundle) match {
-                  case Left(ex) => throw ex
+                uploadTestBundle(bundle) match {
+                  case Left(ex: Throwable) => throw ex
                   case Right(messages) => messages.foreach { getLog.info(_) }
                 }
               }

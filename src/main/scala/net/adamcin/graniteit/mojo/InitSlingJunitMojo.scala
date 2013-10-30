@@ -5,6 +5,12 @@ import org.apache.maven.plugins.annotations.{LifecyclePhase, Mojo, Parameter}
 import dispatch._, Defaults._
 import org.apache.maven.plugin.{MojoExecutionException, MojoFailureException}
 
+/**
+ * Initializes the Sling Junit Framework support by creating a test resource
+ * on the server, setting the sling junit servlet User property for the
+ * maven-failsafe-plugin execution, and waiting for junit servlet readiness
+ * @since 0.6.0
+ */
 @Mojo(name = "init-sling-junit",
   defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST,
   threadSafe = true)
