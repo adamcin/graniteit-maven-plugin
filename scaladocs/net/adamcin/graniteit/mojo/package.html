@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>mojo - Granite IT Maven Plugin 0.5.0-SNAPSHOT API - net.adamcin.graniteit.mojo</title>
-          <meta name="description" content="mojo - Granite IT Maven Plugin 0.5.0 - SNAPSHOT API - net.adamcin.graniteit.mojo" />
-          <meta name="keywords" content="mojo Granite IT Maven Plugin 0.5.0 SNAPSHOT API net.adamcin.graniteit.mojo" />
+          <title>mojo - Granite IT Maven Plugin 0.7.0-SNAPSHOT API - net.adamcin.graniteit.mojo</title>
+          <meta name="description" content="mojo - Granite IT Maven Plugin 0.7.0 - SNAPSHOT API - net.adamcin.graniteit.mojo" />
+          <meta name="keywords" content="mojo Granite IT Maven Plugin 0.7.0 SNAPSHOT API net.adamcin.graniteit.mojo" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -102,8 +102,8 @@ integration test server for goals bound to the integration test phase of the def
         <a href="BaseSlingJunitMojo.html"><span class="name">BaseSlingJunitMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../DetectsSlingJunitDependency.html" class="extype" name="net.adamcin.graniteit.DetectsSlingJunitDependency">DetectsSlingJunitDependency</a></span>
       </span>
       </h4>
-      
-    </li><li name="net.adamcin.graniteit.mojo.ContentPackageITArtifactHandler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="comment cmt">Base Sling Junit Mojo class</p>
+    </li><li name="net.adamcin.graniteit.mojo.ContentPackageITArtifactHandler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ContentPackageITArtifactHandlerextendsArtifactHandler"></a>
       <a id="ContentPackageITArtifactHandler:ContentPackageITArtifactHandler"></a>
       <h4 class="signature">
@@ -115,11 +115,10 @@ integration test server for goals bound to the integration test phase of the def
         <a href="ContentPackageITArtifactHandler.html"><span class="name">ContentPackageITArtifactHandler</span></a><span class="result"> extends <span class="extype" name="org.apache.maven.artifact.handler.ArtifactHandler">ArtifactHandler</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@Component</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="net.adamcin.graniteit.mojo.ContentPackageITLifecycleMapping" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="comment cmt">&quot;content-package-it&quot; <code> ArtifactHandler</code> that simply wraps the component defined by the
+content-package-maven-plugin
+</p>
+    </li><li name="net.adamcin.graniteit.mojo.ContentPackageITLifecycleMapping" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ContentPackageITLifecycleMappingextendsLifecycleMapping"></a>
       <a id="ContentPackageITLifecycleMapping:ContentPackageITLifecycleMapping"></a>
       <h4 class="signature">
@@ -131,10 +130,9 @@ integration test server for goals bound to the integration test phase of the def
         <a href="ContentPackageITLifecycleMapping.html"><span class="name">ContentPackageITLifecycleMapping</span></a><span class="result"> extends <span class="extype" name="org.apache.maven.lifecycle.mapping.LifecycleMapping">LifecycleMapping</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@Component</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      <p class="comment cmt">&quot;content-package-it&quot; <code> LifecycleMapping</code> implementation designed to merge explicit integration-test phase mappings
+with whatever the &quot;content-package&quot; <code> LifecycleMapping</code> component defines
+</p>
     </li><li name="net.adamcin.graniteit.mojo.HelpMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="HelpMojoextendsAbstractMojo"></a>
       <a id="HelpMojo:HelpMojo"></a>
@@ -148,7 +146,7 @@ integration test server for goals bound to the integration test phase of the def
       </span>
       </h4>
       
-    </li><li name="net.adamcin.graniteit.mojo.InitSlingJunitMojo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="net.adamcin.graniteit.mojo.InitSlingJunitMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="InitSlingJunitMojoextendsBaseSlingJunitMojowithHttpParameters"></a>
       <a id="InitSlingJunitMojo:InitSlingJunitMojo"></a>
       <h4 class="signature">
@@ -160,27 +158,24 @@ integration test server for goals bound to the integration test phase of the def
         <a href="InitSlingJunitMojo.html"><span class="name">InitSlingJunitMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@Mojo</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="net.adamcin.graniteit.mojo.JacocoExecMojo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="JacocoExecMojoextendsBaseSlingJunitMojowithHttpParameterswithSlingJacocoParameters"></a>
-      <a id="JacocoExecMojo:JacocoExecMojo"></a>
+      <p class="comment cmt">Initializes the Sling Junit Framework support by creating a test resource
+on the server, setting the sling junit servlet User property for the
+maven-failsafe-plugin execution, and waiting for junit servlet readiness</p>
+    </li><li name="net.adamcin.graniteit.mojo.JacocoDataMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JacocoDataMojoextendsBaseSlingJunitMojowithHttpParameterswithSlingJacocoParameters"></a>
+      <a id="JacocoDataMojo:JacocoDataMojo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="JacocoExecMojo.html"><span class="name">JacocoExecMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="../SlingJacocoParameters.html" class="extype" name="net.adamcin.graniteit.SlingJacocoParameters">SlingJacocoParameters</a></span>
+        <a href="JacocoDataMojo.html"><span class="name">JacocoDataMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="../SlingJacocoParameters.html" class="extype" name="net.adamcin.graniteit.SlingJacocoParameters">SlingJacocoParameters</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@Mojo</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="net.adamcin.graniteit.mojo.ResetJacocoMojo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="comment cmt">Downloads the jacoco runtime data from the server using Sling JacocoServlet,
+which was introduced in org.</p>
+    </li><li name="net.adamcin.graniteit.mojo.ResetJacocoMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ResetJacocoMojoextendsBaseSlingJunitMojowithHttpParameterswithSlingJacocoParameters"></a>
       <a id="ResetJacocoMojo:ResetJacocoMojo"></a>
       <h4 class="signature">
@@ -192,10 +187,7 @@ integration test server for goals bound to the integration test phase of the def
         <a href="ResetJacocoMojo.html"><span class="name">ResetJacocoMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="../SlingJacocoParameters.html" class="extype" name="net.adamcin.graniteit.SlingJacocoParameters">SlingJacocoParameters</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@Mojo</span><span class="args">()</span>
-              
-        </dd></dl></div>
+      <p class="comment cmt">Resets the remote jacoco data prior to execution of the integration-test phase.</p>
     </li><li name="net.adamcin.graniteit.mojo.SetHttpPropertiesMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SetHttpPropertiesMojoextendsBaseITMojowithHttpParameters"></a>
       <a id="SetHttpPropertiesMojo:SetHttpPropertiesMojo"></a>
@@ -211,7 +203,7 @@ integration test server for goals bound to the integration test phase of the def
       <p class="comment cmt">Exports HTTP properties defined in <code> HttpParameters</code> and the active Maven Proxy configuration for integration
 tests to use via <code> java.lang.System#getProperties</code>.</p>
     </li><li name="net.adamcin.graniteit.mojo.UploadContentPackageMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="UploadContentPackageMojoextendsBaseITMojowithOutputParameterswithUploadsPackageswithPackageDependencies"></a>
+      <a id="UploadContentPackageMojoextendsBaseITMojowithOutputParameterswithUploadsPackages"></a>
       <a id="UploadContentPackageMojo:UploadContentPackageMojo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -219,12 +211,12 @@ tests to use via <code> java.lang.System#getProperties</code>.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="UploadContentPackageMojo.html"><span class="name">UploadContentPackageMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a> with <a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a></span>
+        <a href="UploadContentPackageMojo.html"><span class="name">UploadContentPackageMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a></span>
       </span>
       </h4>
-      <p class="comment cmt">Uploads the project vault package and its dependencies to the configured IT server</p>
+      <p class="comment cmt">Uploads the project content-package artifact to the configured IT server</p>
     </li><li name="net.adamcin.graniteit.mojo.UploadSlingJunitMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="UploadSlingJunitMojoextendsBaseSlingJunitMojowithOutputParameterswithPutsBundles"></a>
+      <a id="UploadSlingJunitMojoextendsBaseSlingJunitMojowithOutputParameterswithUploadsBundles"></a>
       <a id="UploadSlingJunitMojo:UploadSlingJunitMojo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -232,13 +224,13 @@ tests to use via <code> java.lang.System#getProperties</code>.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="UploadSlingJunitMojo.html"><span class="name">UploadSlingJunitMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../PutsBundles.html" class="extype" name="net.adamcin.graniteit.PutsBundles">PutsBundles</a></span>
+        <a href="UploadSlingJunitMojo.html"><span class="name">UploadSlingJunitMojo</span></a><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsBundles.html" class="extype" name="net.adamcin.graniteit.UploadsBundles">UploadsBundles</a></span>
       </span>
       </h4>
-      <p class="comment cmt">Upload the sling junit framework bundles, including:
-org.</p>
+      <p class="comment cmt">Upload the sling junit framework bundles necessary for SlingRemoteTest execution,
+including: org.</p>
     </li><li name="net.adamcin.graniteit.mojo.UploadTestsMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="UploadTestsMojoextendsBaseITMojowithRequiresProjectwithPackageDependencieswithResolvesArtifactswithOutputParameterswithUploadsPackageswithPutsBundles"></a>
+      <a id="UploadTestsMojoextendsBaseITMojowithRequiresProjectwithResolvesArtifactswithOutputParameterswithUploadsPackageswithUploadsBundles"></a>
       <a id="UploadTestsMojo:UploadTestsMojo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -246,11 +238,11 @@ org.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="UploadTestsMojo.html"><span class="name">UploadTestsMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a> with <a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a> with <a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a> with <a href="../PutsBundles.html" class="extype" name="net.adamcin.graniteit.PutsBundles">PutsBundles</a></span>
+        <a href="UploadTestsMojo.html"><span class="name">UploadTestsMojo</span></a><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a> with <a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a> with <a href="../UploadsBundles.html" class="extype" name="net.adamcin.graniteit.UploadsBundles">UploadsBundles</a></span>
       </span>
       </h4>
-      <p class="comment cmt">Upload integration test dependencies, including vault packages and OSGi bundles, to the configured integration test
-server</p>
+      <p class="comment cmt">Upload integration test dependencies, including content-packages and OSGi bundles,
+to the configured integration test server.</p>
     </li><li name="net.adamcin.graniteit.mojo.WaitForServerMojo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="WaitForServerMojoextendsBaseITMojowithHttpParameters"></a>
       <a id="WaitForServerMojo:WaitForServerMojo"></a>
@@ -283,7 +275,8 @@ server</p>
         <a href="ContentPackageITLifecycleMapping$.html"><span class="name">ContentPackageITLifecycleMapping</span></a>
       </span>
       </h4>
-      <p class="comment cmt"></p>
+      <p class="comment cmt">Constants for the <code> ContentPackageITLifecycleMapping</code> component
+</p>
     </li></ol>
             </div>
 

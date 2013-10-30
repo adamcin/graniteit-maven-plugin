@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>PutsBundles - Granite IT Maven Plugin 0.5.0-SNAPSHOT API - net.adamcin.graniteit.PutsBundles</title>
-          <meta name="description" content="PutsBundles - Granite IT Maven Plugin 0.5.0 - SNAPSHOT API - net.adamcin.graniteit.PutsBundles" />
-          <meta name="keywords" content="PutsBundles Granite IT Maven Plugin 0.5.0 SNAPSHOT API net.adamcin.graniteit.PutsBundles" />
+          <title>UploadsBundles - Granite IT Maven Plugin 0.7.0-SNAPSHOT API - net.adamcin.graniteit.UploadsBundles</title>
+          <meta name="description" content="UploadsBundles - Granite IT Maven Plugin 0.7.0 - SNAPSHOT API - net.adamcin.graniteit.UploadsBundles" />
+          <meta name="keywords" content="UploadsBundles Granite IT Maven Plugin 0.7.0 SNAPSHOT API net.adamcin.graniteit.UploadsBundles" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -17,7 +17,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'net.adamcin.graniteit.PutsBundles';
+            var hash = 'net.adamcin.graniteit.UploadsBundles';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -31,7 +31,7 @@
       <div id="definition">
         <img src="../../../lib/trait_big.png" />
         <p id="owner"><a href="../../package.html" class="extype" name="net">net</a>.<a href="../package.html" class="extype" name="net.adamcin">adamcin</a>.<a href="package.html" class="extype" name="net.adamcin.graniteit">graniteit</a></p>
-        <h1>PutsBundles</h1>
+        <h1>UploadsBundles</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -40,14 +40,15 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">PutsBundles</span><span class="result"> extends <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> with <a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="BundlePathParameters.html" class="extype" name="net.adamcin.graniteit.BundlePathParameters">BundlePathParameters</a></span>
+        <span class="name">UploadsBundles</span><span class="result"> extends <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> with <a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Trait defining common mojo parameters and methods for uploading OSGi bundles to the configured CQ server
-using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>0.6.0</p></dd></dl><div class="toggleContainer block">
+using POST or PUT HTTP methods</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>0.8.0
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="BundlePathParameters.html" class="extype" name="net.adamcin.graniteit.BundlePathParameters">BundlePathParameters</a>, <a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a>, <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a>, <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span>, <span class="extype" name="org.apache.maven.plugin.ContextEnabled">ContextEnabled</span>, <span class="extype" name="org.apache.maven.plugin.Mojo">Mojo</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a>, <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a>, <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span>, <span class="extype" name="org.apache.maven.plugin.ContextEnabled">ContextEnabled</span>, <span class="extype" name="org.apache.maven.plugin.Mojo">Mojo</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a href="mojo/UploadSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.UploadSlingJunitMojo">UploadSlingJunitMojo</a>, <a href="mojo/UploadTestsMojo.html" class="extype" name="net.adamcin.graniteit.mojo.UploadTestsMojo">UploadTestsMojo</a></div>
@@ -68,7 +69,7 @@ using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="net.adamcin.graniteit.PutsBundles"><span>PutsBundles</span></li><li class="in" name="net.adamcin.graniteit.BundlePathParameters"><span>BundlePathParameters</span></li><li class="in" name="net.adamcin.graniteit.HttpParameters"><span>HttpParameters</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseMojo"><span>BaseMojo</span></li><li class="in" name="org.apache.maven.plugin.AbstractMojo"><span>AbstractMojo</span></li><li class="in" name="org.apache.maven.plugin.ContextEnabled"><span>ContextEnabled</span></li><li class="in" name="org.apache.maven.plugin.Mojo"><span>Mojo</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="net.adamcin.graniteit.UploadsBundles"><span>UploadsBundles</span></li><li class="in" name="net.adamcin.graniteit.HttpParameters"><span>HttpParameters</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseMojo"><span>BaseMojo</span></li><li class="in" name="org.apache.maven.plugin.AbstractMojo"><span>AbstractMojo</span></li><li class="in" name="org.apache.maven.plugin.ContextEnabled"><span>ContextEnabled</span></li><li class="in" name="org.apache.maven.plugin.Mojo"><span>Mojo</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -294,19 +295,19 @@ using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.BundlePathParameters#defaultTestBundleInstallPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="defaultTestBundleInstallPath:String(&quot;/apps/testBundles/install/30&quot;)"></a>
-      <a id="defaultTestBundleInstallPath:String(&quot;/apps/testBundles/install/30&quot;)"></a>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#defaultTestBundlePathPrefix" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="defaultTestBundlePathPrefix:String(&quot;/system/console&quot;)"></a>
+      <a id="defaultTestBundlePathPrefix:String(&quot;/system/console&quot;)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">defaultTestBundleInstallPath</span><span class="result">: String(&quot;/apps/testBundles/install/30&quot;)</span>
+        <span class="name">defaultTestBundlePathPrefix</span><span class="result">: String(&quot;/system/console&quot;)</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BundlePathParameters.html" class="extype" name="net.adamcin.graniteit.BundlePathParameters">BundlePathParameters</a></dd></dl></div>
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -359,6 +360,20 @@ using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#failOnError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="failOnError:Boolean"></a>
+      <a id="failOnError:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">failOnError</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Set to true to fail the build if an error occurs during upload
+</p>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -375,6 +390,19 @@ using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#getBundleSymbolicName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getBundleSymbolicName(file:java.io.File):Either[Throwable,String]"></a>
+      <a id="getBundleSymbolicName(File):Either[Throwable,String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getBundleSymbolicName</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -402,15 +430,15 @@ using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#getPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPluginContext():java.util.Map"></a>
-      <a id="getPluginContext():Map"></a>
+      <a id="getPluginContext():java.util.Map[_,_]"></a>
+      <a id="getPluginContext():Map[_,_]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span></span>
+        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -427,7 +455,7 @@ using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.BundlePathParameters#getTestBundlePath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="net.adamcin.graniteit.UploadsBundles#getTestBundlePath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getTestBundlePath(file:java.io.File):String"></a>
       <a id="getTestBundlePath(File):String"></a>
       <h4 class="signature">
@@ -439,8 +467,8 @@ using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><
         <span class="name">getTestBundlePath</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BundlePathParameters.html" class="extype" name="net.adamcin.graniteit.BundlePathParameters">BundlePathParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.BundlePathParameters#getTestBundleRepoPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      
+    </li><li name="net.adamcin.graniteit.UploadsBundles#getTestBundleRepoPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getTestBundleRepoPath(filename:String):String"></a>
       <a id="getTestBundleRepoPath(String):String"></a>
       <h4 class="signature">
@@ -452,7 +480,20 @@ using the PUT HTTP method</p></div><dl class="attributes block"> <dt>Since</dt><
         <span class="name">getTestBundleRepoPath</span><span class="params">(<span name="filename">filename: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BundlePathParameters.html" class="extype" name="net.adamcin.graniteit.BundlePathParameters">BundlePathParameters</a></dd></dl></div>
+      
+    </li><li name="net.adamcin.graniteit.UploadsBundles#handleError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="handleError(message:Either[Throwable,List[String]],messages:List[String]):Either[Throwable,List[String]]"></a>
+      <a id="handleError(Either[Throwable,List[String]],List[String]):Either[Throwable,List[String]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleError</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>, <span name="messages">messages: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Nil</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -626,6 +667,19 @@ Overrides any other HTTP proxy configuration
       <p class="shortcomment cmt">Password to use in connection credentials
 </p><div class="fullcomment"><div class="comment cmt"><p>Password to use in connection credentials
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#postTestBundle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="postTestBundle(symbolicName:String,file:java.io.File):Either[Throwable,List[String]]"></a>
+      <a id="postTestBundle(String,File):Either[Throwable,List[String]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">postTestBundle</span><span class="params">(<span name="symbolicName">symbolicName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      </h4>
+      
     </li><li name="net.adamcin.graniteit.HttpParameters#proxyCredentials" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="proxyCredentials:(String,String)"></a>
       <a id="proxyCredentials:(String,String)"></a>
@@ -710,8 +764,8 @@ Overrides any other HTTP proxy configuration
         <span class="name">proxyServerId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Server ID for credentials defined in maven settings
-</p><div class="fullcomment"><div class="comment cmt"><p>Server ID for credentials defined in maven settings
+      <p class="shortcomment cmt">Server ID for proxy credentials defined in maven settings
+</p><div class="fullcomment"><div class="comment cmt"><p>Server ID for proxy credentials defined in maven settings
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#proxySet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="proxySet:Boolean"></a>
@@ -745,29 +799,29 @@ associated mojo parameter alternatives
       <p class="shortcomment cmt">The HTTP Proxy username
 </p><div class="fullcomment"><div class="comment cmt"><p>The HTTP Proxy username
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.PutsBundles#putBundleToPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="putBundleToPath(file:java.io.File,path:String):Either[Throwable,List[String]]"></a>
-      <a id="putBundleToPath(File,String):Either[Throwable,List[String]]"></a>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#putBundleToPath" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="putBundleToPath(symbolicName:String,file:java.io.File,path:String):Either[Throwable,List[String]]"></a>
+      <a id="putBundleToPath(String,File,String):Either[Throwable,List[String]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">putBundleToPath</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">putBundleToPath</span><span class="params">(<span name="symbolicName">symbolicName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
       </span>
       </h4>
       
-    </li><li name="net.adamcin.graniteit.PutsBundles#putTestBundle" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="putTestBundle(file:java.io.File):Either[Throwable,List[String]]"></a>
-      <a id="putTestBundle(File):Either[Throwable,List[String]]"></a>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#putTestBundle" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="putTestBundle(symbolicName:String,file:java.io.File):Either[Throwable,List[String]]"></a>
+      <a id="putTestBundle(String,File):Either[Throwable,List[String]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">putTestBundle</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+        <span class="name">putTestBundle</span><span class="params">(<span name="symbolicName">symbolicName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Puts the specified file to the configured test bundle install location</p><div class="fullcomment"><div class="comment cmt"><p>Puts the specified file to the configured test bundle install location</p></div><dl class="paramcmts block"><dt class="param">file</dt><dd class="cmt"><p>file to put</p></dd><dt>returns</dt><dd class="cmt"><p>either log messages or a throwable
@@ -797,7 +851,9 @@ associated mojo parameter alternatives
         <span class="name">serverId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
+      <p class="shortcomment cmt">Id of server defined in the maven settings to use for credentials
+</p><div class="fullcomment"><div class="comment cmt"><p>Id of server defined in the maven settings to use for credentials
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.mojo.BaseMojo#session" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="session:org.apache.maven.execution.MavenSession"></a>
       <a id="session:MavenSession"></a>
@@ -825,15 +881,15 @@ associated mojo parameter alternatives
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#setPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setPluginContext(x$1:java.util.Map):Unit"></a>
-      <a id="setPluginContext(Map):Unit"></a>
+      <a id="setPluginContext(x$1:java.util.Map[_,_]):Unit"></a>
+      <a id="setPluginContext(Map[_,_]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -878,6 +934,20 @@ associated mojo parameter alternatives
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a></dd></dl></div>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#startLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="startLevel:Int"></a>
+      <a id="startLevel:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">startLevel</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Specify the OSGi start level of the bundle
+</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -891,21 +961,20 @@ associated mojo parameter alternatives
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="net.adamcin.graniteit.BundlePathParameters#testBundleInstallPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="testBundleInstallPath:String"></a>
-      <a id="testBundleInstallPath:String"></a>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#testBundlePathPrefix" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="testBundlePathPrefix:String"></a>
+      <a id="testBundlePathPrefix:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">testBundleInstallPath</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">testBundlePathPrefix</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Set the JCR path where test bundles will be installed during the integration test phase this project.</p><div class="fullcomment"><div class="comment cmt"><p>Set the JCR path where test bundles will be installed during the integration test phase this project. Use a
-numeric suffix (as in &quot;/apps/myappTests/install/30&quot;) to apply a felix start level configuration to the bundles</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BundlePathParameters.html" class="extype" name="net.adamcin.graniteit.BundlePathParameters">BundlePathParameters</a></dd><dt>Since</dt><dd><p>1.0.0
-</p></dd></dl></div>
+      <p class="shortcomment cmt">Set the request path prefix under which test bundles will be installed (an &quot;/install/&quot; segment will be appended
+to this value and if <code>usePut</code> is set to <code>true</code> then the start level will be appended to that.</p>
     </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <a id="toString():String"></a>
@@ -919,6 +988,19 @@ numeric suffix (as in &quot;/apps/myappTests/install/30&quot;) to apply a felix 
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#uploadTestBundle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="uploadTestBundle(file:java.io.File):Either[Throwable,List[String]]"></a>
+      <a id="uploadTestBundle(File):Either[Throwable,List[String]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">uploadTestBundle</span><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <span class="extype" name="scala.Either">Either</span>[<span class="extype" name="scala.Throwable">Throwable</span>, <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      </h4>
+      
     </li><li name="net.adamcin.graniteit.HttpParameters#urlForPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="urlForPath(absPath:String):dispatch.Req"></a>
       <a id="urlForPath(String):Req"></a>
@@ -932,6 +1014,20 @@ numeric suffix (as in &quot;/apps/myappTests/install/30&quot;) to apply a felix 
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
+    </li><li name="net.adamcin.graniteit.UploadsBundles#usePut" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="usePut:Boolean"></a>
+      <a id="usePut:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">usePut</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Use a PUT request instead of a POST request
+</p>
     </li><li name="net.adamcin.graniteit.HttpParameters#user" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="user:String"></a>
       <a id="user:String"></a>
@@ -1020,9 +1116,7 @@ numeric suffix (as in &quot;/apps/myappTests/install/30&quot;) to apply a felix 
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="net.adamcin.graniteit.BundlePathParameters">
-              <h3>Inherited from <a href="BundlePathParameters.html" class="extype" name="net.adamcin.graniteit.BundlePathParameters">BundlePathParameters</a></h3>
-            </div><div class="parent" name="net.adamcin.graniteit.HttpParameters">
+        <div class="parent" name="net.adamcin.graniteit.HttpParameters">
               <h3>Inherited from <a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></h3>
             </div><div class="parent" name="net.adamcin.graniteit.mojo.BaseMojo">
               <h3>Inherited from <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a></h3>

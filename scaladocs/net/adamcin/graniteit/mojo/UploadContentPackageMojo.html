@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>UploadContentPackageMojo - Granite IT Maven Plugin 0.5.0-SNAPSHOT API - net.adamcin.graniteit.mojo.UploadContentPackageMojo</title>
-          <meta name="description" content="UploadContentPackageMojo - Granite IT Maven Plugin 0.5.0 - SNAPSHOT API - net.adamcin.graniteit.mojo.UploadContentPackageMojo" />
-          <meta name="keywords" content="UploadContentPackageMojo Granite IT Maven Plugin 0.5.0 SNAPSHOT API net.adamcin.graniteit.mojo.UploadContentPackageMojo" />
+          <title>UploadContentPackageMojo - Granite IT Maven Plugin 0.7.0-SNAPSHOT API - net.adamcin.graniteit.mojo.UploadContentPackageMojo</title>
+          <meta name="description" content="UploadContentPackageMojo - Granite IT Maven Plugin 0.7.0 - SNAPSHOT API - net.adamcin.graniteit.mojo.UploadContentPackageMojo" />
+          <meta name="keywords" content="UploadContentPackageMojo Granite IT Maven Plugin 0.7.0 SNAPSHOT API net.adamcin.graniteit.mojo.UploadContentPackageMojo" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -40,16 +40,17 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">UploadContentPackageMojo</span><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a> with <a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a></span>
+        <span class="name">UploadContentPackageMojo</span><span class="result"> extends <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a> with <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a> with <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Uploads the project vault package and its dependencies to the configured IT server</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Uploads the project content-package artifact to the configured IT server</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@Mojo</span><span class="args">()</span>
               
-        </dd><dt>Since</dt><dd><p>1.0.0</p></dd></dl><div class="toggleContainer block">
+        </dd><dt>Since</dt><dd><p>0.6.0
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a>, <a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a>, <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a>, <a href="../IdentifiesPackages.html" class="extype" name="net.adamcin.graniteit.IdentifiesPackages">IdentifiesPackages</a>, <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a>, <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a>, <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a>, <a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a>, <a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a>, <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span>, <span class="extype" name="org.apache.maven.plugin.ContextEnabled">ContextEnabled</span>, <span class="extype" name="org.apache.maven.plugin.Mojo">Mojo</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a>, <a href="../IdentifiesPackages.html" class="extype" name="net.adamcin.graniteit.IdentifiesPackages">IdentifiesPackages</a>, <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a>, <a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a>, <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a>, <a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a>, <a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a>, <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span>, <span class="extype" name="org.apache.maven.plugin.ContextEnabled">ContextEnabled</span>, <span class="extype" name="org.apache.maven.plugin.Mojo">Mojo</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -67,7 +68,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="net.adamcin.graniteit.mojo.UploadContentPackageMojo"><span>UploadContentPackageMojo</span></li><li class="in" name="net.adamcin.graniteit.PackageDependencies"><span>PackageDependencies</span></li><li class="in" name="net.adamcin.graniteit.ResolvesArtifacts"><span>ResolvesArtifacts</span></li><li class="in" name="net.adamcin.graniteit.UploadsPackages"><span>UploadsPackages</span></li><li class="in" name="net.adamcin.graniteit.IdentifiesPackages"><span>IdentifiesPackages</span></li><li class="in" name="net.adamcin.graniteit.HttpParameters"><span>HttpParameters</span></li><li class="in" name="net.adamcin.graniteit.OutputParameters"><span>OutputParameters</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseITMojo"><span>BaseITMojo</span></li><li class="in" name="net.adamcin.graniteit.RequiresProject"><span>RequiresProject</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseMojo"><span>BaseMojo</span></li><li class="in" name="org.apache.maven.plugin.AbstractMojo"><span>AbstractMojo</span></li><li class="in" name="org.apache.maven.plugin.ContextEnabled"><span>ContextEnabled</span></li><li class="in" name="org.apache.maven.plugin.Mojo"><span>Mojo</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="net.adamcin.graniteit.mojo.UploadContentPackageMojo"><span>UploadContentPackageMojo</span></li><li class="in" name="net.adamcin.graniteit.UploadsPackages"><span>UploadsPackages</span></li><li class="in" name="net.adamcin.graniteit.IdentifiesPackages"><span>IdentifiesPackages</span></li><li class="in" name="net.adamcin.graniteit.HttpParameters"><span>HttpParameters</span></li><li class="in" name="net.adamcin.graniteit.OutputParameters"><span>OutputParameters</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseITMojo"><span>BaseITMojo</span></li><li class="in" name="net.adamcin.graniteit.RequiresProject"><span>RequiresProject</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseMojo"><span>BaseMojo</span></li><li class="in" name="org.apache.maven.plugin.AbstractMojo"><span>AbstractMojo</span></li><li class="in" name="org.apache.maven.plugin.ContextEnabled"><span>ContextEnabled</span></li><li class="in" name="org.apache.maven.plugin.Mojo"><span>Mojo</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -310,19 +311,6 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#copyToDir" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copyToDir(dir:java.io.File,log:org.apache.maven.plugin.logging.Log)(artifact:org.apache.maven.artifact.Artifact):java.io.File"></a>
-      <a id="copyToDir(File,Log)(Artifact):File"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">copyToDir</span><span class="params">(<span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>, <span name="log">log: <span class="extype" name="org.apache.maven.plugin.logging.Log">Log</span></span>)</span><span class="params">(<span name="artifact">artifact: <span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span></span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#credentials" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="credentials:(String,String)"></a>
       <a id="credentials:(String,String)"></a>
@@ -336,32 +324,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#dependencies" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dependencies:List[org.apache.maven.artifact.Artifact]"></a>
-      <a id="dependencies:List[Artifact]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dependencies</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.PackageDependencies#dependsOn" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dependsOn:List[org.apache.jackrabbit.vault.packaging.Dependency]"></a>
-      <a id="dependsOn:List[Dependency]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dependsOn</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="org.apache.jackrabbit.vault.packaging.Dependency">Dependency</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -511,15 +473,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#getPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPluginContext():java.util.Map"></a>
-      <a id="getPluginContext():Map"></a>
+      <a id="getPluginContext():java.util.Map[_,_]"></a>
+      <a id="getPluginContext():Map[_,_]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span></span>
+        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -681,35 +643,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#localRepository" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="localRepository:org.apache.maven.artifact.repository.ArtifactRepository"></a>
-      <a id="localRepository:ArtifactRepository"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">localRepository</span><span class="result">: <span class="extype" name="org.apache.maven.artifact.repository.ArtifactRepository">ArtifactRepository</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#localRepositoryPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="localRepositoryPath:java.io.File"></a>
-      <a id="localRepositoryPath:File"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">localRepositoryPath</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Specify the local repository path for resolved artifacts
-Refer to maven-install-plugin:install-file</p><div class="fullcomment"><div class="comment cmt"><p>Specify the local repository path for resolved artifacts
-Refer to maven-install-plugin:install-file</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd><dt>Since</dt><dd><p>1.0.4
-</p></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#mkdir" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mkdir(absPath:String):(dispatch.Req,com.ning.http.client.Response)"></a>
       <a id="mkdir(String):(Req,Response)"></a>
@@ -831,99 +764,6 @@ Overrides any other HTTP proxy configuration
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../OutputParameters.html" class="extype" name="net.adamcin.graniteit.OutputParameters">OutputParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#pA" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pA:scala.util.matching.Regex"></a>
-      <a id="pA:Regex"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pA</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#pGA" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pGA:scala.util.matching.Regex"></a>
-      <a id="pGA:Regex"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pGA</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#pGATCV" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pGATCV:scala.util.matching.Regex"></a>
-      <a id="pGATCV:Regex"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pGATCV</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#pGATV" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pGATV:scala.util.matching.Regex"></a>
-      <a id="pGATV:Regex"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pGATV</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#pGAV" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pGAV:scala.util.matching.Regex"></a>
-      <a id="pGAV:Regex"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">pGAV</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.PackageDependencies#packageDependencies" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="packageDependencies:java.util.List[String]"></a>
-      <a id="packageDependencies:List[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">packageDependencies</span><span class="result">: <span class="extype" name="java.util.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">List of artifactIds matching dependencies that are valid vault packages
-</p><div class="fullcomment"><div class="comment cmt"><p>List of artifactIds matching dependencies that are valid vault packages
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.PackageDependencies#packageDependencyArtifacts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="packageDependencyArtifacts:Stream[org.apache.maven.artifact.Artifact]"></a>
-      <a id="packageDependencyArtifacts:Stream[Artifact]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">packageDependencyArtifacts</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.UploadsPackages#parseServiceResponse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="parseServiceResponse(respBody:String):Either[Throwable,(Boolean,String)]"></a>
       <a id="parseServiceResponse(String):Either[Throwable,(Boolean,String)]"></a>
@@ -952,19 +792,6 @@ Overrides any other HTTP proxy configuration
       <p class="shortcomment cmt">Password to use in connection credentials
 </p><div class="fullcomment"><div class="comment cmt"><p>Password to use in connection credentials
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#proj" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="proj:org.apache.maven.project.MavenProject"></a>
-      <a id="proj:MavenProject"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">proj</span><span class="result">: <span class="extype" name="org.apache.maven.project.MavenProject">MavenProject</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.RequiresProject#project" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="project:org.apache.maven.project.MavenProject"></a>
       <a id="project:MavenProject"></a>
@@ -1075,8 +902,8 @@ Overrides any other HTTP proxy configuration
         <span class="name">proxyServerId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Server ID for credentials defined in maven settings
-</p><div class="fullcomment"><div class="comment cmt"><p>Server ID for credentials defined in maven settings
+      <p class="shortcomment cmt">Server ID for proxy credentials defined in maven settings
+</p><div class="fullcomment"><div class="comment cmt"><p>Server ID for proxy credentials defined in maven settings
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#proxySet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="proxySet:Boolean"></a>
@@ -1125,97 +952,6 @@ associated mojo parameter alternatives
       <p class="shortcomment cmt">Set to false to not install any subpackages that might be embedded within each dependency
 </p><div class="fullcomment"><div class="comment cmt"><p>Set to false to not install any subpackages that might be embedded within each dependency
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#repositoryRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="repositoryRequest:org.apache.maven.artifact.repository.RepositoryRequest"></a>
-      <a id="repositoryRequest:RepositoryRequest"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">repositoryRequest</span><span class="result">: <span class="extype" name="org.apache.maven.artifact.repository.RepositoryRequest">RepositoryRequest</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#repositorySystem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="repositorySystem:org.apache.maven.repository.RepositorySystem"></a>
-      <a id="repositorySystem:RepositorySystem"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">repositorySystem</span><span class="result">: <span class="extype" name="org.apache.maven.repository.RepositorySystem">RepositorySystem</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#resolveArtifacts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resolveArtifacts(artifacts:Stream[org.apache.maven.artifact.Artifact]):Stream[org.apache.maven.artifact.Artifact]"></a>
-      <a id="resolveArtifacts(Stream[Artifact]):Stream[Artifact]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">resolveArtifacts</span><span class="params">(<span name="artifacts">artifacts: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#resolveByArtifactIds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resolveByArtifactIds(artifactIds:Set[String]):Stream[org.apache.maven.artifact.Artifact]"></a>
-      <a id="resolveByArtifactIds(Set[String]):Stream[Artifact]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">resolveByArtifactIds</span><span class="params">(<span name="artifactIds">artifactIds: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#resolveByCoordinates" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resolveByCoordinates(groupId:String,artifactId:String,version:String,artifactType:String,classifier:String):Option[org.apache.maven.artifact.Artifact]"></a>
-      <a id="resolveByCoordinates(String,String,String,String,String):Option[Artifact]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">resolveByCoordinates</span><span class="params">(<span name="groupId">groupId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="artifactId">artifactId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="version">version: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="artifactType">artifactType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="classifier">classifier: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#resolveByCoordinates" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resolveByCoordinates(coordinates:String):Option[org.apache.maven.artifact.Artifact]"></a>
-      <a id="resolveByCoordinates(String):Option[Artifact]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">resolveByCoordinates</span><span class="params">(<span name="coordinates">coordinates: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.ResolvesArtifacts#resolveByFilter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="resolveByFilter(filter:String):Stream[org.apache.maven.artifact.Artifact]"></a>
-      <a id="resolveByFilter(String):Stream[Artifact]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">resolveByFilter</span><span class="params">(<span name="filter">filter: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Stream">Stream</span>[<span class="extype" name="org.apache.maven.artifact.Artifact">Artifact</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#securityDispatcher" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="securityDispatcher:org.sonatype.plexus.components.sec.dispatcher.SecDispatcher"></a>
       <a id="securityDispatcher:SecDispatcher"></a>
@@ -1241,7 +977,9 @@ associated mojo parameter alternatives
         <span class="name">serverId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
+      <p class="shortcomment cmt">Id of server defined in the maven settings to use for credentials
+</p><div class="fullcomment"><div class="comment cmt"><p>Id of server defined in the maven settings to use for credentials
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.UploadsPackages#servicePath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="servicePath:String"></a>
       <a id="servicePath:String"></a>
@@ -1300,15 +1038,15 @@ links to the package manager console.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#setPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setPluginContext(x$1:java.util.Map):Unit"></a>
-      <a id="setPluginContext(Map):Unit"></a>
+      <a id="setPluginContext(x$1:java.util.Map[_,_]):Unit"></a>
+      <a id="setPluginContext(Map[_,_]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -1350,7 +1088,7 @@ links to the package manager console.
         <span class="name">skip</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Set to true to skip mojo execution
+      <p class="shortcomment cmt">Set to true to specifically disable this goal
 </p>
     </li><li name="net.adamcin.graniteit.mojo.BaseITMojo#skipITSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="skipITSupport:Boolean"></a>
@@ -1726,11 +1464,7 @@ which is interpreted by expecting a GET response of 405 (Method not allowed)</p>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="net.adamcin.graniteit.PackageDependencies">
-              <h3>Inherited from <a href="../PackageDependencies.html" class="extype" name="net.adamcin.graniteit.PackageDependencies">PackageDependencies</a></h3>
-            </div><div class="parent" name="net.adamcin.graniteit.ResolvesArtifacts">
-              <h3>Inherited from <a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></h3>
-            </div><div class="parent" name="net.adamcin.graniteit.UploadsPackages">
+        <div class="parent" name="net.adamcin.graniteit.UploadsPackages">
               <h3>Inherited from <a href="../UploadsPackages.html" class="extype" name="net.adamcin.graniteit.UploadsPackages">UploadsPackages</a></h3>
             </div><div class="parent" name="net.adamcin.graniteit.IdentifiesPackages">
               <h3>Inherited from <a href="../IdentifiesPackages.html" class="extype" name="net.adamcin.graniteit.IdentifiesPackages">IdentifiesPackages</a></h3>

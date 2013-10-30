@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>JacocoExecMojo - Granite IT Maven Plugin 0.5.0-SNAPSHOT API - net.adamcin.graniteit.mojo.JacocoExecMojo</title>
-          <meta name="description" content="JacocoExecMojo - Granite IT Maven Plugin 0.5.0 - SNAPSHOT API - net.adamcin.graniteit.mojo.JacocoExecMojo" />
-          <meta name="keywords" content="JacocoExecMojo Granite IT Maven Plugin 0.5.0 SNAPSHOT API net.adamcin.graniteit.mojo.JacocoExecMojo" />
+          <title>JacocoDataMojo - Granite IT Maven Plugin 0.7.0-SNAPSHOT API - net.adamcin.graniteit.mojo.JacocoDataMojo</title>
+          <meta name="description" content="JacocoDataMojo - Granite IT Maven Plugin 0.7.0 - SNAPSHOT API - net.adamcin.graniteit.mojo.JacocoDataMojo" />
+          <meta name="keywords" content="JacocoDataMojo Granite IT Maven Plugin 0.7.0 SNAPSHOT API net.adamcin.graniteit.mojo.JacocoDataMojo" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -17,7 +17,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'net.adamcin.graniteit.mojo.JacocoExecMojo';
+            var hash = 'net.adamcin.graniteit.mojo.JacocoDataMojo';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -31,7 +31,7 @@
       <div id="definition">
         <img src="../../../../lib/class_big.png" />
         <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.adamcin">adamcin</a>.<a href="../package.html" class="extype" name="net.adamcin.graniteit">graniteit</a>.<a href="package.html" class="extype" name="net.adamcin.graniteit.mojo">mojo</a></p>
-        <h1>JacocoExecMojo</h1>
+        <h1>JacocoDataMojo</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -40,14 +40,16 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">JacocoExecMojo</span><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="../SlingJacocoParameters.html" class="extype" name="net.adamcin.graniteit.SlingJacocoParameters">SlingJacocoParameters</a></span>
+        <span class="name">JacocoDataMojo</span><span class="result"> extends <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a> with <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="../SlingJacocoParameters.html" class="extype" name="net.adamcin.graniteit.SlingJacocoParameters">SlingJacocoParameters</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Annotations</dt><dd>
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Downloads the jacoco runtime data from the server using Sling JacocoServlet,
+which was introduced in org.apache.sling.junit.core:1.0.9-SNAPSHOT</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@Mojo</span><span class="args">()</span>
               
-        </dd></dl><div class="toggleContainer block">
+        </dd><dt>Since</dt><dd><p>0.8.0
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="../SlingJacocoParameters.html" class="extype" name="net.adamcin.graniteit.SlingJacocoParameters">SlingJacocoParameters</a>, <a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a>, <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a>, <a href="../DetectsSlingJunitDependency.html" class="extype" name="net.adamcin.graniteit.DetectsSlingJunitDependency">DetectsSlingJunitDependency</a>, <a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a>, <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a>, <a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a>, <a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a>, <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span>, <span class="extype" name="org.apache.maven.plugin.ContextEnabled">ContextEnabled</span>, <span class="extype" name="org.apache.maven.plugin.Mojo">Mojo</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -67,7 +69,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="net.adamcin.graniteit.mojo.JacocoExecMojo"><span>JacocoExecMojo</span></li><li class="in" name="net.adamcin.graniteit.SlingJacocoParameters"><span>SlingJacocoParameters</span></li><li class="in" name="net.adamcin.graniteit.HttpParameters"><span>HttpParameters</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo"><span>BaseSlingJunitMojo</span></li><li class="in" name="net.adamcin.graniteit.DetectsSlingJunitDependency"><span>DetectsSlingJunitDependency</span></li><li class="in" name="net.adamcin.graniteit.ResolvesArtifacts"><span>ResolvesArtifacts</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseITMojo"><span>BaseITMojo</span></li><li class="in" name="net.adamcin.graniteit.RequiresProject"><span>RequiresProject</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseMojo"><span>BaseMojo</span></li><li class="in" name="org.apache.maven.plugin.AbstractMojo"><span>AbstractMojo</span></li><li class="in" name="org.apache.maven.plugin.ContextEnabled"><span>ContextEnabled</span></li><li class="in" name="org.apache.maven.plugin.Mojo"><span>Mojo</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="net.adamcin.graniteit.mojo.JacocoDataMojo"><span>JacocoDataMojo</span></li><li class="in" name="net.adamcin.graniteit.SlingJacocoParameters"><span>SlingJacocoParameters</span></li><li class="in" name="net.adamcin.graniteit.HttpParameters"><span>HttpParameters</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo"><span>BaseSlingJunitMojo</span></li><li class="in" name="net.adamcin.graniteit.DetectsSlingJunitDependency"><span>DetectsSlingJunitDependency</span></li><li class="in" name="net.adamcin.graniteit.ResolvesArtifacts"><span>ResolvesArtifacts</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseITMojo"><span>BaseITMojo</span></li><li class="in" name="net.adamcin.graniteit.RequiresProject"><span>RequiresProject</span></li><li class="in" name="net.adamcin.graniteit.mojo.BaseMojo"><span>BaseMojo</span></li><li class="in" name="org.apache.maven.plugin.AbstractMojo"><span>AbstractMojo</span></li><li class="in" name="org.apache.maven.plugin.ContextEnabled"><span>ContextEnabled</span></li><li class="in" name="org.apache.maven.plugin.Mojo"><span>Mojo</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -87,16 +89,16 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="net.adamcin.graniteit.mojo.JacocoExecMojo#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():net.adamcin.graniteit.mojo.JacocoExecMojo"></a>
-      <a id="&lt;init&gt;:JacocoExecMojo"></a>
+              <ol><li name="net.adamcin.graniteit.mojo.JacocoDataMojo#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():net.adamcin.graniteit.mojo.JacocoDataMojo"></a>
+      <a id="&lt;init&gt;:JacocoDataMojo"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">JacocoExecMojo</span><span class="params">()</span>
+        <span class="name">JacocoDataMojo</span><span class="params">()</span>
       </span>
       </h4>
       
@@ -413,7 +415,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="net.adamcin.graniteit.mojo.JacocoExecMojo#execute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="net.adamcin.graniteit.mojo.JacocoDataMojo#execute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="execute():Unit"></a>
       <a id="execute():Unit"></a>
       <h4 class="signature">
@@ -425,7 +427,7 @@
         <span class="name">execute</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.adamcin.graniteit.mojo.JacocoExecMojo">JacocoExecMojo</a> → <a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> → Mojo</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.adamcin.graniteit.mojo.JacocoDataMojo">JacocoDataMojo</a> → <a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> → Mojo</dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#expedite" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="expedite[T](req:dispatch.Req,resp:scala.concurrent.Future[T]):(dispatch.Req,T)"></a>
       <a id="expedite[T](Req,Future[T]):(Req,T)"></a>
@@ -512,15 +514,15 @@ fails for any reason
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#getPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPluginContext():java.util.Map"></a>
-      <a id="getPluginContext():Map"></a>
+      <a id="getPluginContext():java.util.Map[_,_]"></a>
+      <a id="getPluginContext():Map[_,_]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span></span>
+        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -628,32 +630,35 @@ fails for any reason
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.mojo.JacocoExecMojo#jacocoExecClassifier" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="jacocoExecClassifier:String"></a>
-      <a id="jacocoExecClassifier:String"></a>
+    </li><li name="net.adamcin.graniteit.mojo.JacocoDataMojo#jacocoDataClassifier" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="jacocoDataClassifier:String"></a>
+      <a id="jacocoDataClassifier:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">jacocoExecClassifier</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">jacocoDataClassifier</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
-    </li><li name="net.adamcin.graniteit.mojo.JacocoExecMojo#jacocoExecFile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="jacocoExecFile:java.io.File"></a>
-      <a id="jacocoExecFile:File"></a>
+      <p class="shortcomment cmt">Specify the classifier used when attaching the jacoco data artifact to
+the project
+</p>
+    </li><li name="net.adamcin.graniteit.mojo.JacocoDataMojo#jacocoDataFile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="jacocoDataFile:java.io.File"></a>
+      <a id="jacocoDataFile:File"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">jacocoExecFile</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
+        <span class="name">jacocoDataFile</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Specify the filename of the downloaded Jacoco exec data
+</p>
     </li><li name="net.adamcin.graniteit.SlingJacocoParameters#jacocoExecPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="jacocoExecPath:String"></a>
       <a id="jacocoExecPath:String"></a>
@@ -708,9 +713,10 @@ fails for any reason
       </span>
       </h4>
       <p class="shortcomment cmt">Specify the local repository path for resolved artifacts
-Refer to maven-install-plugin:install-file</p><div class="fullcomment"><div class="comment cmt"><p>Specify the local repository path for resolved artifacts
-Refer to maven-install-plugin:install-file</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd><dt>Since</dt><dd><p>1.0.4
-</p></dd></dl></div>
+Refer to maven-install-plugin:install-file
+</p><div class="fullcomment"><div class="comment cmt"><p>Specify the local repository path for resolved artifacts
+Refer to maven-install-plugin:install-file
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#mkdir" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mkdir(absPath:String):(dispatch.Req,com.ning.http.client.Response)"></a>
       <a id="mkdir(String):(Req,Response)"></a>
@@ -994,8 +1000,8 @@ Overrides any other HTTP proxy configuration
         <span class="name">proxyServerId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Server ID for credentials defined in maven settings
-</p><div class="fullcomment"><div class="comment cmt"><p>Server ID for credentials defined in maven settings
+      <p class="shortcomment cmt">Server ID for proxy credentials defined in maven settings
+</p><div class="fullcomment"><div class="comment cmt"><p>Server ID for proxy credentials defined in maven settings
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#proxySet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="proxySet:Boolean"></a>
@@ -1145,7 +1151,9 @@ associated mojo parameter alternatives
         <span class="name">serverId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
+      <p class="shortcomment cmt">Id of server defined in the maven settings to use for credentials
+</p><div class="fullcomment"><div class="comment cmt"><p>Id of server defined in the maven settings to use for credentials
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.mojo.BaseMojo#session" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="session:org.apache.maven.execution.MavenSession"></a>
       <a id="session:MavenSession"></a>
@@ -1173,15 +1181,15 @@ associated mojo parameter alternatives
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#setPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setPluginContext(x$1:java.util.Map):Unit"></a>
-      <a id="setPluginContext(Map):Unit"></a>
+      <a id="setPluginContext(x$1:java.util.Map[_,_]):Unit"></a>
+      <a id="setPluginContext(Map[_,_]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -1198,7 +1206,7 @@ associated mojo parameter alternatives
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a></dd></dl></div>
-    </li><li name="net.adamcin.graniteit.mojo.JacocoExecMojo#skip" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="net.adamcin.graniteit.mojo.JacocoDataMojo#skip" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="skip:Boolean"></a>
       <a id="skip:Boolean"></a>
       <h4 class="signature">
@@ -1210,7 +1218,8 @@ associated mojo parameter alternatives
         <span class="name">skip</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Set to true to specifically disable this goal
+</p>
     </li><li name="net.adamcin.graniteit.mojo.BaseITMojo#skipITSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="skipITSupport:Boolean"></a>
       <a id="skipITSupport:Boolean"></a>
@@ -1348,7 +1357,9 @@ It is recognized by graniteit to disable uploading of test artifacts and integra
         <span class="name">slingJunitVersion</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DetectsSlingJunitDependency.html" class="extype" name="net.adamcin.graniteit.DetectsSlingJunitDependency">DetectsSlingJunitDependency</a></dd></dl></div>
+      <p class="shortcomment cmt">Specify to override the resolved version of Sling Junit Framework dependencies.</p><div class="fullcomment"><div class="comment cmt"><p>Specify to override the resolved version of Sling Junit Framework dependencies. Leave blank
+to detect the version from project-defined sling junit dependencies
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DetectsSlingJunitDependency.html" class="extype" name="net.adamcin.graniteit.DetectsSlingJunitDependency">DetectsSlingJunitDependency</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

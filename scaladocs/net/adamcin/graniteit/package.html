@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>graniteit - Granite IT Maven Plugin 0.5.0-SNAPSHOT API - net.adamcin.graniteit</title>
-          <meta name="description" content="graniteit - Granite IT Maven Plugin 0.5.0 - SNAPSHOT API - net.adamcin.graniteit" />
-          <meta name="keywords" content="graniteit Granite IT Maven Plugin 0.5.0 SNAPSHOT API net.adamcin.graniteit" />
+          <title>graniteit - Granite IT Maven Plugin 0.7.0-SNAPSHOT API - net.adamcin.graniteit</title>
+          <meta name="description" content="graniteit - Granite IT Maven Plugin 0.7.0 - SNAPSHOT API - net.adamcin.graniteit" />
+          <meta name="keywords" content="graniteit Granite IT Maven Plugin 0.7.0 SNAPSHOT API net.adamcin.graniteit" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -63,20 +63,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="net.adamcin.graniteit.BundlePathParameters" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="BundlePathParametersextendsBaseMojo"></a>
-      <a id="BundlePathParameters:BundlePathParameters"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="BundlePathParameters.html"><span class="name">BundlePathParameters</span></a><span class="result"> extends <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Trait defining common parameters and methods for placement of bundles within a JCR repository</p>
-    </li><li name="net.adamcin.graniteit.ChecksumCalculator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="net.adamcin.graniteit.ChecksumCalculator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ChecksumCalculatorextendsAnyRef"></a>
       <a id="ChecksumCalculator:ChecksumCalculator"></a>
       <h4 class="signature">
@@ -88,7 +75,7 @@
         <a href="ChecksumCalculator.html"><span class="name">ChecksumCalculator</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Mutable class used to calculate checksums.</p>
     </li><li name="net.adamcin.graniteit.DavReq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DavReqextendsReqwithDavVerbs"></a>
       <a id="DavReq:DavReq"></a>
@@ -127,7 +114,8 @@
         <a href="DetectsSlingJunitDependency.html"><span class="name">DetectsSlingJunitDependency</span></a><span class="result"> extends <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> with <a href="ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Defines common parameters and methods for supporting Sling Junit Framework
+functionality</p>
     </li><li name="net.adamcin.graniteit.HttpParameters" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="HttpParametersextendsBaseMojo"></a>
       <a id="HttpParameters:HttpParameters"></a>
@@ -153,7 +141,7 @@
         <a href="IdentifiesPackages.html"><span class="name">IdentifiesPackages</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <p class="comment cmt">Trait defining common mojo parameters and methods needed to identify vault package binaries based on
+      <p class="comment cmt">Trait defining common mojo parameters and methods needed to identify content-package binaries based on
 embedded metadata</p>
     </li><li name="net.adamcin.graniteit.OutputParameters" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="OutputParametersextendsBaseMojowithRequiresProject"></a>
@@ -168,34 +156,6 @@ embedded metadata</p>
       </span>
       </h4>
       <p class="comment cmt">Trait defining common output path variables</p>
-    </li><li name="net.adamcin.graniteit.PackageDependencies" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="PackageDependenciesextendsBaseMojowithRequiresProjectwithIdentifiesPackageswithResolvesArtifacts"></a>
-      <a id="PackageDependencies:PackageDependencies"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="PackageDependencies.html"><span class="name">PackageDependencies</span></a><span class="result"> extends <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> with <a href="RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a> with <a href="IdentifiesPackages.html" class="extype" name="net.adamcin.graniteit.IdentifiesPackages">IdentifiesPackages</a> with <a href="ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Trait defining common mojo parameters and methods useful for identifying package dependencies that
-are not embedded in the main project artifact</p>
-    </li><li name="net.adamcin.graniteit.PutsBundles" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="PutsBundlesextendsBaseMojowithHttpParameterswithBundlePathParameters"></a>
-      <a id="PutsBundles:PutsBundles"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="PutsBundles.html"><span class="name">PutsBundles</span></a><span class="result"> extends <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> with <a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a> with <a href="BundlePathParameters.html" class="extype" name="net.adamcin.graniteit.BundlePathParameters">BundlePathParameters</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Trait defining common mojo parameters and methods for uploading OSGi bundles to the configured CQ server
-using the PUT HTTP method</p>
     </li><li name="net.adamcin.graniteit.RequiresProject" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="RequiresProjectextendsBaseMojo"></a>
       <a id="RequiresProject:RequiresProject"></a>
@@ -236,7 +196,22 @@ local and remote repositories</p>
         <a href="SlingJacocoParameters.html"><span class="name">SlingJacocoParameters</span></a><span class="result"> extends <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> with <a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Trait defining common parameters and methods supporting Sling-based Jacoco
+functionality and reporting</p>
+    </li><li name="net.adamcin.graniteit.UploadsBundles" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="UploadsBundlesextendsBaseMojowithHttpParameters"></a>
+      <a id="UploadsBundles:UploadsBundles"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="UploadsBundles.html"><span class="name">UploadsBundles</span></a><span class="result"> extends <a href="mojo/BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a> with <a href="HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait defining common mojo parameters and methods for uploading OSGi bundles to the configured CQ server
+using POST or PUT HTTP methods</p>
     </li><li name="net.adamcin.graniteit.UploadsPackages" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="UploadsPackagesextendsBaseMojowithHttpParameterswithIdentifiesPackages"></a>
       <a id="UploadsPackages:UploadsPackages"></a>

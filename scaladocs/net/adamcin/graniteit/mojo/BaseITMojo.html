@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>BaseITMojo - Granite IT Maven Plugin 0.5.0-SNAPSHOT API - net.adamcin.graniteit.mojo.BaseITMojo</title>
-          <meta name="description" content="BaseITMojo - Granite IT Maven Plugin 0.5.0 - SNAPSHOT API - net.adamcin.graniteit.mojo.BaseITMojo" />
-          <meta name="keywords" content="BaseITMojo Granite IT Maven Plugin 0.5.0 SNAPSHOT API net.adamcin.graniteit.mojo.BaseITMojo" />
+          <title>BaseITMojo - Granite IT Maven Plugin 0.7.0-SNAPSHOT API - net.adamcin.graniteit.mojo.BaseITMojo</title>
+          <meta name="description" content="BaseITMojo - Granite IT Maven Plugin 0.7.0 - SNAPSHOT API - net.adamcin.graniteit.mojo.BaseITMojo" />
+          <meta name="keywords" content="BaseITMojo Granite IT Maven Plugin 0.7.0 SNAPSHOT API net.adamcin.graniteit.mojo.BaseITMojo" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -45,12 +45,13 @@
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Base project IT mojo defining common mojo parameters and methods for enabling/disabling traffic to the configured
-integration test server for goals bound to the integration test phase of the default content-package-with-IT lifecycle</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.0.0</p></dd></dl><div class="toggleContainer block">
+integration test server for goals bound to the integration test phase of the default content-package-with-IT lifecycle</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>0.6.0
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a>, <a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a>, <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span>, <span class="extype" name="org.apache.maven.plugin.ContextEnabled">ContextEnabled</span>, <span class="extype" name="org.apache.maven.plugin.Mojo">Mojo</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a>, <a href="InitSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.InitSlingJunitMojo">InitSlingJunitMojo</a>, <a href="JacocoExecMojo.html" class="extype" name="net.adamcin.graniteit.mojo.JacocoExecMojo">JacocoExecMojo</a>, <a href="ResetJacocoMojo.html" class="extype" name="net.adamcin.graniteit.mojo.ResetJacocoMojo">ResetJacocoMojo</a>, <a href="SetHttpPropertiesMojo.html" class="extype" name="net.adamcin.graniteit.mojo.SetHttpPropertiesMojo">SetHttpPropertiesMojo</a>, <a href="UploadContentPackageMojo.html" class="extype" name="net.adamcin.graniteit.mojo.UploadContentPackageMojo">UploadContentPackageMojo</a>, <a href="UploadSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.UploadSlingJunitMojo">UploadSlingJunitMojo</a>, <a href="UploadTestsMojo.html" class="extype" name="net.adamcin.graniteit.mojo.UploadTestsMojo">UploadTestsMojo</a>, <a href="WaitForServerMojo.html" class="extype" name="net.adamcin.graniteit.mojo.WaitForServerMojo">WaitForServerMojo</a></div>
+          <div class="subClasses hiddenContent"><a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a>, <a href="InitSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.InitSlingJunitMojo">InitSlingJunitMojo</a>, <a href="JacocoDataMojo.html" class="extype" name="net.adamcin.graniteit.mojo.JacocoDataMojo">JacocoDataMojo</a>, <a href="ResetJacocoMojo.html" class="extype" name="net.adamcin.graniteit.mojo.ResetJacocoMojo">ResetJacocoMojo</a>, <a href="SetHttpPropertiesMojo.html" class="extype" name="net.adamcin.graniteit.mojo.SetHttpPropertiesMojo">SetHttpPropertiesMojo</a>, <a href="UploadContentPackageMojo.html" class="extype" name="net.adamcin.graniteit.mojo.UploadContentPackageMojo">UploadContentPackageMojo</a>, <a href="UploadSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.UploadSlingJunitMojo">UploadSlingJunitMojo</a>, <a href="UploadTestsMojo.html" class="extype" name="net.adamcin.graniteit.mojo.UploadTestsMojo">UploadTestsMojo</a>, <a href="WaitForServerMojo.html" class="extype" name="net.adamcin.graniteit.mojo.WaitForServerMojo">WaitForServerMojo</a></div>
         </div></div>
         
 
@@ -286,15 +287,15 @@ integration test server for goals bound to the integration test phase of the def
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#getPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPluginContext():java.util.Map"></a>
-      <a id="getPluginContext():Map"></a>
+      <a id="getPluginContext():java.util.Map[_,_]"></a>
+      <a id="getPluginContext():Map[_,_]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span></span>
+        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -403,15 +404,15 @@ integration test server for goals bound to the integration test phase of the def
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#setPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setPluginContext(x$1:java.util.Map):Unit"></a>
-      <a id="setPluginContext(Map):Unit"></a>
+      <a id="setPluginContext(x$1:java.util.Map[_,_]):Unit"></a>
+      <a id="setPluginContext(Map[_,_]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>

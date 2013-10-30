@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>InitSlingJunitMojo - Granite IT Maven Plugin 0.5.0-SNAPSHOT API - net.adamcin.graniteit.mojo.InitSlingJunitMojo</title>
-          <meta name="description" content="InitSlingJunitMojo - Granite IT Maven Plugin 0.5.0 - SNAPSHOT API - net.adamcin.graniteit.mojo.InitSlingJunitMojo" />
-          <meta name="keywords" content="InitSlingJunitMojo Granite IT Maven Plugin 0.5.0 SNAPSHOT API net.adamcin.graniteit.mojo.InitSlingJunitMojo" />
+          <title>InitSlingJunitMojo - Granite IT Maven Plugin 0.7.0-SNAPSHOT API - net.adamcin.graniteit.mojo.InitSlingJunitMojo</title>
+          <meta name="description" content="InitSlingJunitMojo - Granite IT Maven Plugin 0.7.0 - SNAPSHOT API - net.adamcin.graniteit.mojo.InitSlingJunitMojo" />
+          <meta name="keywords" content="InitSlingJunitMojo Granite IT Maven Plugin 0.7.0 SNAPSHOT API net.adamcin.graniteit.mojo.InitSlingJunitMojo" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -44,10 +44,13 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Annotations</dt><dd>
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Initializes the Sling Junit Framework support by creating a test resource
+on the server, setting the sling junit servlet User property for the
+maven-failsafe-plugin execution, and waiting for junit servlet readiness</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@Mojo</span><span class="args">()</span>
               
-        </dd></dl><div class="toggleContainer block">
+        </dd><dt>Since</dt><dd><p>0.6.0
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a>, <a href="BaseSlingJunitMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseSlingJunitMojo">BaseSlingJunitMojo</a>, <a href="../DetectsSlingJunitDependency.html" class="extype" name="net.adamcin.graniteit.DetectsSlingJunitDependency">DetectsSlingJunitDependency</a>, <a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a>, <a href="BaseITMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseITMojo">BaseITMojo</a>, <a href="../RequiresProject.html" class="extype" name="net.adamcin.graniteit.RequiresProject">RequiresProject</a>, <a href="BaseMojo.html" class="extype" name="net.adamcin.graniteit.mojo.BaseMojo">BaseMojo</a>, <span class="extype" name="org.apache.maven.plugin.AbstractMojo">AbstractMojo</span>, <span class="extype" name="org.apache.maven.plugin.ContextEnabled">ContextEnabled</span>, <span class="extype" name="org.apache.maven.plugin.Mojo">Mojo</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -521,15 +524,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#getPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPluginContext():java.util.Map"></a>
-      <a id="getPluginContext():Map"></a>
+      <a id="getPluginContext():java.util.Map[_,_]"></a>
+      <a id="getPluginContext():Map[_,_]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span></span>
+        <span class="name">getPluginContext</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -650,9 +653,10 @@
       </span>
       </h4>
       <p class="shortcomment cmt">Specify the local repository path for resolved artifacts
-Refer to maven-install-plugin:install-file</p><div class="fullcomment"><div class="comment cmt"><p>Specify the local repository path for resolved artifacts
-Refer to maven-install-plugin:install-file</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd><dt>Since</dt><dd><p>1.0.4
-</p></dd></dl></div>
+Refer to maven-install-plugin:install-file
+</p><div class="fullcomment"><div class="comment cmt"><p>Specify the local repository path for resolved artifacts
+Refer to maven-install-plugin:install-file
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ResolvesArtifacts.html" class="extype" name="net.adamcin.graniteit.ResolvesArtifacts">ResolvesArtifacts</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#mkdir" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mkdir(absPath:String):(dispatch.Req,com.ning.http.client.Response)"></a>
       <a id="mkdir(String):(Req,Response)"></a>
@@ -936,8 +940,8 @@ Overrides any other HTTP proxy configuration
         <span class="name">proxyServerId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Server ID for credentials defined in maven settings
-</p><div class="fullcomment"><div class="comment cmt"><p>Server ID for credentials defined in maven settings
+      <p class="shortcomment cmt">Server ID for proxy credentials defined in maven settings
+</p><div class="fullcomment"><div class="comment cmt"><p>Server ID for proxy credentials defined in maven settings
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.HttpParameters#proxySet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="proxySet:Boolean"></a>
@@ -1087,7 +1091,9 @@ associated mojo parameter alternatives
         <span class="name">serverId</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
+      <p class="shortcomment cmt">Id of server defined in the maven settings to use for credentials
+</p><div class="fullcomment"><div class="comment cmt"><p>Id of server defined in the maven settings to use for credentials
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../HttpParameters.html" class="extype" name="net.adamcin.graniteit.HttpParameters">HttpParameters</a></dd></dl></div>
     </li><li name="net.adamcin.graniteit.mojo.BaseMojo#session" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="session:org.apache.maven.execution.MavenSession"></a>
       <a id="session:MavenSession"></a>
@@ -1115,15 +1121,15 @@ associated mojo parameter alternatives
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → Mojo</dd></dl></div>
     </li><li name="org.apache.maven.plugin.AbstractMojo#setPluginContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setPluginContext(x$1:java.util.Map):Unit"></a>
-      <a id="setPluginContext(Map):Unit"></a>
+      <a id="setPluginContext(x$1:java.util.Map[_,_]):Unit"></a>
+      <a id="setPluginContext(Map[_,_]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">setPluginContext</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Map">Map</span>[_, _]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractMojo → ContextEnabled</dd></dl></div>
@@ -1349,7 +1355,9 @@ for use by integration test classes executed by the SlingAnnotationsTestRunner
         <span class="name">slingJunitVersion</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DetectsSlingJunitDependency.html" class="extype" name="net.adamcin.graniteit.DetectsSlingJunitDependency">DetectsSlingJunitDependency</a></dd></dl></div>
+      <p class="shortcomment cmt">Specify to override the resolved version of Sling Junit Framework dependencies.</p><div class="fullcomment"><div class="comment cmt"><p>Specify to override the resolved version of Sling Junit Framework dependencies. Leave blank
+to detect the version from project-defined sling junit dependencies
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DetectsSlingJunitDependency.html" class="extype" name="net.adamcin.graniteit.DetectsSlingJunitDependency">DetectsSlingJunitDependency</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
