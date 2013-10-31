@@ -68,14 +68,14 @@ trait HttpParameters extends BaseMojo {
   /**
    * Specify the CQ username associated with package creation and installation
    */
-  @Parameter(property = "graniteit.user", defaultValue = DEFAULT_USER)
-  val user = DEFAULT_USER
+  @Parameter(property = "graniteit.username", alias = "user", defaultValue = DEFAULT_USER)
+  val username = DEFAULT_USER
 
   /**
    * Password to use in connection credentials
    */
-  @Parameter(property = "graniteit.pass", defaultValue = DEFAULT_PASS)
-  val pass = DEFAULT_PASS
+  @Parameter(property = "graniteit.password", alias = "pass", defaultValue = DEFAULT_PASS)
+  val password = DEFAULT_PASS
 
   /**
    * Id of server defined in the maven settings to use for credentials
@@ -124,14 +124,14 @@ trait HttpParameters extends BaseMojo {
   /**
    * The HTTP Proxy username
    */
-  @Parameter(property = "graniteit.proxy.user")
-  val proxyUser: String = null
+  @Parameter(property = "graniteit.proxy.username")
+  val proxyUsername: String = null
 
   /**
    * The HTTP Proxy password
    */
-  @Parameter(property = "graniteit.proxy.pass")
-  val proxyPass: String = null
+  @Parameter(property = "graniteit.proxy.password")
+  val proxyPassword: String = null
 
   /**
    * Server ID for proxy credentials defined in maven settings
@@ -146,7 +146,7 @@ trait HttpParameters extends BaseMojo {
   var skipMkdirs = false
 
   lazy val credentials: (String, String) = {
-    val exCreds = (user, optDecrypt(pass))
+    val exCreds = (username, optDecrypt(password))
 
     Option(serverId) match {
       case None => exCreds
@@ -158,7 +158,7 @@ trait HttpParameters extends BaseMojo {
   }
 
   lazy val proxyCredentials: (String, String) = {
-    val exCreds = (proxyUser, optDecrypt(proxyPass))
+    val exCreds = (proxyUsername, optDecrypt(proxyPassword))
 
     Option(proxyServerId) match {
       case None => exCreds

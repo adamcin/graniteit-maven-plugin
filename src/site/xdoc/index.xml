@@ -33,47 +33,13 @@
     <body>
         <section name="graniteit-maven-plugin">
             <p>
-                The graniteit-maven-plugin is a tool for developers of Adobe CQ/CRX/Granite-based applications to
-                create content package artifacts from vlt working copies.
+                The graniteit-maven-plugin enhances the content-package maven lifecycle for developers of Adobe
+                CQ/CRX/Granite-based applications to simplify the configuration necessary to execute and report on
+                integration tests based on Selenium and the Sling Junit Framework.
             </p>
-            <subsection name="CRX Content Package Creation">
-                <p>
-                    Developers might use
-                    <a href="http://dev.day.com/docs/en/crx/current/how_to/how_to_use_the_vlttool.html">Adobe's VLT tool</a>
-                    to develop their application content, code, and configuration in their local Granite instance, and then
-                    create CRX content packages to deploy that content, code, and configuration to shared repositories and
-                    production CRX servers.
-                </p>
-                <p>
-                    The graniteit-maven-plugin defines a "content-package-it" packaging type which is an enhanced version
-                    of the content-package lifecycle. It provides a set of maven goals mapped to the pre-integration-test
-                    and post-integration-test phases of the default lifecycle (<tt>compile</tt>, <tt>test</tt>,
-                    <tt>package</tt>, <tt>install</tt>, <tt>deploy</tt>), and maps the integration-test and verify goals
-                    of the maven-failsafe-plugin to their appropriate phases as well.
-                </p>
-            </subsection>
-            <subsection name="Integration Test Support">
-                <p>
-                    In addition to the basic package creation goals, a number of goals have been provided to support the use
-                    of the maven-failsafe-plugin for execution of integration tests based on the
-                    <a href="http://sling.apache.org/site/sling-testing-tools.html">Sling JUnit Framework</a>.
-                    These are all mapped to the <tt>pre-integration-test</tt> phase so that they may be easily executed
-                    immediately prior to the execution of the maven-failsafe-plugin's <tt>integration-test</tt> goal. Simply
-                    use a profile to set the <tt>supportITs</tt> user property to enable the following goals:
-                </p>
-                <dl>
-                    <dt><a href="upload-content-package-mojo.html">upload-content-package</a></dt>
-                    <dd>Uploads the content-package-it project artifact to the configured CRX server</dd>
-                    <dt><a href="upload-tests-mojo.html">upload-tests</a></dt>
-                    <dd>Uploads packages and bundles to prepare the CRX server for execution of integration tests</dd>
-                    <dt><a href="wait-for-server-mojo.html">wait-for-server</a></dt>
-                    <dd>Causes the build to wait for server readiness by repeatedly pinging it at the configured path and
-                        checking the response for a specific substring</dd>
-                    <dt><a href="set-http-properties-mojo.html">set-http-properties</a></dt>
-                    <dd>Exports the configured HTTP connection parameters as System properties for classes executed by the
-                        maven-failsafe-plugin during the <tt>integration-test</tt> phase.</dd>
-                </dl>
-            </subsection>
+            <p>
+                Visit the <a href="http://wiki.github.com/adamcin/graniteit-maven-plugin/">Wiki for more information.</a>
+            </p>
             <subsection name="Design Priorities">
                 <ul>
                     <li>
@@ -99,8 +65,8 @@
                     <li>JDK 1.6+</li>
                     <li>
                         <strong>
-                            graniteit-maven-plugin will only work when used in conjunction with the proprietary
-                            content-package-maven-plugin, which is available in the
+                            graniteit-maven-plugin is designed to work in conjunction with the proprietary
+                            com.day.jcr.vault:content-package-maven-plugin, which is available in the
                             public <a href="http://repo.adobe.com/">Adobe Nexus repository</a>
                         </strong>
                     </li>

@@ -57,13 +57,10 @@
             <item name="FAQ" href="http://wiki.github.com/adamcin/graniteit-maven-plugin/frequently-asked-questions"/>
         </links>
         <menu name="Overview">
-            <item name="Introduction" href="index.html" />
+            <item name="About" href="index.html" />
+            <item name="Getting Started" href="http://wiki.github.com/adamcin/graniteit-maven-plugin/getting-started" />
             <item name="Goals" href="plugin-info.html" />
-            <item name="Usage" href="usage.html" />
             <item name="ScalaDocs" href="scaladocs/index.html" />
-        </menu>
-        <menu name="How To">
-            <item name="Setup Integration Tests" href="integration-testing.html" />
         </menu>
         <menu ref="reports" />
         <menu ref="modules" />

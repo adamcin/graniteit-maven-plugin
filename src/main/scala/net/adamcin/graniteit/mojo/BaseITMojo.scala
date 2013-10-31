@@ -40,12 +40,6 @@ class BaseITMojo
   with RequiresProject {
 
   /**
-   * Set this property to true to disable the pre-integration-test goals
-   */
-  @Parameter(property = "skipITSupport")
-  val skipITSupport = false
-
-  /**
    * By convention, this parameter is used to disable execution of the maven-failsafe-plugin.
    * It is recognized by graniteit to disable uploading of test artifacts and integration test reporting goals.
    */
@@ -60,16 +54,16 @@ class BaseITMojo
   val skipTests = false
 
   override def skipOrExecute(skip: Boolean)(body: => Unit) {
-    if (skipITSupport || skip) {
-      getLog.info("skipping [skipITSupport=" + skipITSupport + "][skip=" + skip + "]")
+    if (skip) {
+      getLog.info("skipping [skip=" + skip + "]")
     } else {
       body
     }
   }
 
   def skipWithTestsOrExecute(skip: Boolean)(body: => Unit) {
-    if (skipITSupport || skip || skipITs || skipTests) {
-      getLog.info("skipping [skipITSupport=" + skipITSupport + "][skip=" + skip + "][skipITs=" + skipITs + "][skipTests=" + skipTests + "]")
+    if (skip || skipITs || skipTests) {
+      getLog.info("skipping [skip=" + skip + "][skipITs=" + skipITs + "][skipTests=" + skipTests + "]")
     } else {
       body
     }
