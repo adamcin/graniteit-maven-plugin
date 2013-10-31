@@ -197,6 +197,7 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.9</version>
                 <configuration>
+                    <server>github</server>
                     <message>Creating site for ${project.artifactId} ${project.version}</message>
                     <noJekyll>true</noJekyll>
                     <repositoryOwner>adamcin</repositoryOwner>
